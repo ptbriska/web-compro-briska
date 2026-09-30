@@ -1,0 +1,77 @@
+/* ==========================================
+   BRISKA RESPONSIVE STYLES
+   Media Queries for Mobile & Tablet
+   ========================================== */
+
+/* Tablet & Smaller Laptops (under 992px) */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 1.875rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  /* Mobile Menu Toggle Button */
+  .mobile-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1.25rem;
+    transition: var(--transition);
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    padding-left: 1rem;
+    width: 100%;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile Devices (under 576px) */
+@media (max-width: 576px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .top-bar {
+    display: none; /* Hide top bar on very small screens for clean UX */
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
