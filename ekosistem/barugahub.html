@@ -4,70 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barugahub - BRISKA Education Ecosystem</title>
+    <meta name="description" content="Barugahub: Lembaga Penyelenggara Event Pendidikan, Kompetisi Penelitian Nasional, Academic Camp, dan Education Expo dari BRISKA." />
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Base & Page Styling -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
     <link rel="stylesheet" href="../assets/css/pages/ekosistem.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a href="../index.html" class="logo">BRISKA</a>
-            <nav class="nav-menu">
-                <a href="../index.html">Beranda</a>
-                <a href="../tentang.html">Tentang Kami</a>
-                <a href="barugahub.html" class="active">Ekosistem</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Placeholder Header (Dimuat via components.js) -->
+    <div id="header-placeholder"></div>
 
-    <section class="ecosystem-hero">
-        <div class="container hero-content">
+    <!-- Hero Section Barugahub -->
+    <!-- Kelas barugahub-hero akan memberikan nuansa gradasi hijau (Emerald) sesuai CSS -->
+    <section class="eco-hero barugahub-hero">
+        <div class="container hero-content text-center">
+            <div class="eco-brand-icon">
+                <i class="fa-solid fa-users-rectangle"></i>
+            </div>
             <span class="category-badge">Event & Community</span>
             <h1>Barugahub</h1>
             <p class="tagline">"Basis Ruang Gelora Prestasi"</p>
-            <a href="https://barugahub.com" target="_blank" class="domain-link"><i class="fa-solid fa-globe"></i> barugahub.com</a>
+            <div class="eco-cta">
+                <a href="https://barugahub.com" target="_blank" class="btn btn-accent"><i class="fa-solid fa-globe" style="margin-right: 8px;"></i> Kunjungi Website Utama</a>
+            </div>
         </div>
     </section>
 
-    <section class="ecosystem-detail section-padding">
+    <!-- Info Bar / Overview -->
+    <section class="eco-overview">
         <div class="container">
             <div class="info-grid">
                 <div class="info-card">
-                    <i class="fa-solid fa-users-rectangle"></i>
-                    <h4>Kategori Unit</h4>
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h4>Fokus Unit</h4>
                     <p>Lembaga Event Pendidikan</p>
                 </div>
                 <div class="info-card">
                     <i class="fa-solid fa-calendar-check"></i>
-                    <h4>Jadwal Operasional</h4>
-                    <p>April 2027</p>
+                    <h4>Status Operasional</h4>
+                    <p>Mulai April 2027</p>
                 </div>
                 <div class="info-card">
                     <i class="fa-solid fa-star"></i>
-                    <h4>Keunggulan Utama</h4>
-                    <p>Penyelenggara Event & Kompetisi Akademik Berbasis Prestasi</p>
+                    <h4>Visi Keunggulan</h4>
+                    <p>Penyelenggara Event & Kompetisi Akademik</p>
                 </div>
-            </div>
-
-            <div class="services-wrapper section-margin">
-                <h2>Layanan Khusus Event Pendidikan</h2>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> Briska Kompetisi Penelitian & Bisnis Nasional</li>
-                    <li><i class="fa-solid fa-check"></i> Seminar Riset & Webinar</li>
-                    <li><i class="fa-solid fa-check"></i> Academic Camp</li>
-                    <li><i class="fa-solid fa-check"></i> Teacher Summit</li>
-                    <li><i class="fa-solid fa-check"></i> Education Expo</li>
-                </ul>
             </div>
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="container text-center">
-            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
+    <!-- Detail Layanan Utama -->
+    <section class="eco-services section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Layanan Khusus Event Pendidikan</h2>
+                <p class="section-description">Membangun ekosistem kolaborasi ilmiah dan akademik yang mempertemukan pelajar, guru, praktisi, dan akademisi dalam ruang prestasi bertaraf nasional.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <h3>Briska Kompetisi Penelitian & Bisnis</h3>
+                    <p>Penyelenggaraan ajang kompetisi riset sains dan rencana bisnis nasional bagi pelajar dan mahasiswa untuk melatih kemampuan inovasi dan analitis tingkat tinggi.</p>
+                </div>
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                    <h3>Seminar Riset & Webinar</h3>
+                    <p>Forum akademik dan diskusi panel interaktif yang menghadirkan pakar industri dan akademisi terkemuka untuk membahas isu-isu krusial dunia pendidikan.</p>
+                </div>
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-campground"></i></div>
+                    <h3>Academic Camp</h3>
+                    <p>Program inkubasi dan pemusatan latihan akademik secara tatap muka (offline bootcamp) untuk persiapan olimpiade, riset, atau pengembangan kepemimpinan siswa.</p>
+                </div>
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Teacher Summit</h3>
+                    <p>Konferensi tingkat nasional khusus untuk tenaga pendidik. Bertujuan menjadi ruang berbagi metodologi pembelajaran mutakhir, teknologi EdTech, dan kebijakan kurikulum.</p>
+                </div>
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-tent"></i></div>
+                    <h3>Education Expo</h3>
+                    <p>Pameran pendidikan terpadu yang memfasilitasi institusi pendidikan, universitas, penyedia teknologi (EdTech), dan calon peserta didik untuk menjalin kemitraan.</p>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Call To Action & Kontak Ekosistem -->
+    <section class="eco-contact section-padding text-center">
+        <div class="container">
+            <h2>Ingin Berkolaborasi Mengadakan Event Akademik?</h2>
+            <p>Jadikan Barugahub mitra resmi sekolah atau institusi Anda dalam menyelenggarakan kompetisi, seminar, maupun pameran pendidikan berskala besar.</p>
+            <div class="margin-top-lg">
+                <a href="mailto:info@briska.co.id" class="btn btn-primary"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Ajukan Proposal Kolaborasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder Footer (Dimuat via components.js) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
 
 </body>
 </html>
