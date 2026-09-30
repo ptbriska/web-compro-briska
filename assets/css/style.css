@@ -1,4 +1,21 @@
 /* ==========================================
+   IMPORT ALL MODULES
+   ========================================== */
+@import url('components.css');
+@import url('responsive.css');
+
+/* CSS spesifik halaman jika ada (opsional) */
+@import url('pages/csr.css');
+@import url('pages/portal.css');
+@import url('pages/tentang.css');
+
+/* ==========================================
+   BRISKA EDUCATION CORPORATION
+   Global CSS & Design System
+   ========================================== */
+   
+/* ... sisa kode style.css kamu yang kemarin biarkan tetap di bawahnya ... */
+/* ==========================================
    BRISKA EDUCATION CORPORATION
    Global CSS & Design System
    Theme: Corporate Modern Navy & Gray
