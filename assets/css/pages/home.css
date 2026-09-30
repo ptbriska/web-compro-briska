@@ -5,8 +5,7 @@
 /* Hero Section */
 .hero-section {
   padding: 5rem 0 4rem 0;
-  background: linear-gradient(135deg, var(--neutral-light) 0%, var(--white) 100%);
-  border-bottom: 1px solid var(--neutral-gray);
+  position: relative;
 }
 
 .hero-grid {
@@ -17,13 +16,16 @@
 }
 
 .badge-hero {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background-color: rgba(0, 141, 218, 0.1);
   color: var(--accent-blue);
   font-size: 0.85rem;
   font-weight: 700;
   padding: 0.4rem 0.9rem;
   border-radius: 50px;
+  border: 1px solid rgba(0, 141, 218, 0.2);
   margin-bottom: 1.25rem;
 }
 
@@ -32,6 +34,7 @@
   line-height: 1.2;
   margin-bottom: 1.25rem;
   letter-spacing: -0.5px;
+  color: var(--primary-navy);
 }
 
 .hero-description {
@@ -44,6 +47,7 @@
 .hero-cta {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .hero-image-wrapper {
@@ -55,20 +59,23 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   object-fit: cover;
+  border: 4px solid var(--white);
 }
 
 .hero-card-badge {
   position: absolute;
   bottom: -20px;
   left: -20px;
-  background-color: var(--primary-navy);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--neutral-dark);
   padding: 1rem 1.25rem;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   gap: 1rem;
   box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-gray);
+  z-index: 2;
 }
 
 .hero-card-badge i {
@@ -79,27 +86,36 @@
 .hero-card-badge strong {
   display: block;
   font-size: 1rem;
+  color: var(--primary-navy);
 }
 
 .hero-card-badge span {
   font-size: 0.75rem;
-  color: var(--neutral-gray);
+  color: var(--neutral-medium);
 }
 
 /* Dashboard Counter Stats */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
 .stat-card {
-  background-color: var(--white);
-  border: 1px solid var(--neutral-gray);
+  background: var(--bg-card-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--white);
   border-radius: var(--radius-md);
   padding: 2rem 1.5rem;
   text-align: center;
   box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background-color: var(--white);
 }
 
 .stat-icon {
@@ -124,7 +140,7 @@
 /* SDG Section */
 .sdg-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
@@ -133,7 +149,16 @@
   padding: 1.75rem;
   border-radius: var(--radius-md);
   border-left: 4px solid var(--accent-blue);
+  border-top: 1px solid var(--neutral-gray);
+  border-right: 1px solid var(--neutral-gray);
+  border-bottom: 1px solid var(--neutral-gray);
   box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.sdg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .sdg-badge {
@@ -159,13 +184,13 @@
 .sdg-card p {
   color: var(--neutral-medium);
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Ecosystem Section */
 .ecosystem-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.75rem;
 }
 
@@ -183,15 +208,14 @@
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 700;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
-.status-active { background-color: #E6F4EA; color: #137333; }
-.status-upcoming { background-color: #FEF7E0; color: #B06000; }
-.status-planned { background-color: #E8F0FE; color: #1A73E8; }
+.status-active { background-color: #DCFCE7; color: #166534; }
+.status-upcoming { background-color: #FEF9C3; color: #854D0E; }
+.status-planned { background-color: #F1F5F9; color: #475569; }
 
 .eco-domain {
   color: var(--accent-blue);
@@ -214,16 +238,18 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  transition: var(--transition);
 }
 
 .eco-link:hover {
   color: var(--accent-blue);
+  transform: translateX(4px);
 }
 
 /* Documentation Section */
 .doc-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
@@ -232,6 +258,7 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   height: 240px;
+  box-shadow: var(--shadow-sm);
 }
 
 .doc-item img {
@@ -258,25 +285,25 @@
 
 .doc-overlay p {
   font-size: 0.8rem;
-  color: var(--neutral-gray);
+  color: #CBD5E1;
 }
 
 .doc-item:hover img {
   transform: scale(1.05);
 }
 
-/* Responsive adjustments for Home page */
+/* Responsive adjustments */
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
+    text-align: center;
   }
-  
-  .stats-grid, .sdg-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-cta {
+    justify-content: center;
   }
-
-  .ecosystem-grid, .doc-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-card-badge {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -284,8 +311,7 @@
   .hero-title {
     font-size: 2rem;
   }
-
-  .stats-grid, .sdg-grid, .ecosystem-grid, .doc-grid {
-    grid-template-columns: 1fr;
+  .hero-cta {
+    flex-direction: column;
   }
 }
