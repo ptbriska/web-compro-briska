@@ -1,93 +1,277 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelas Bisa - BRISKA Education Ecosystem</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/pages/ekosistem.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelas Bisa - BRISKA Education Corporation</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Paths (Perhatikan '../' untuk keluar dari folder ekosistem) -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <style>
+    /* Styling khusus Halaman Detail Ekosistem */
+    .eco-hero {
+      background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+      color: var(--white);
+      padding: 4rem 0 3rem 0;
+    }
+    .eco-badge {
+      display: inline-block;
+      background: rgba(0, 141, 218, 0.2);
+      color: #38BDF8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .eco-hero h1 {
+      color: var(--white);
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .eco-hero .tagline {
+      font-size: 1.25rem;
+      color: #94A3B8;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .eco-hero .site-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #38BDF8;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .eco-layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .eco-sidebar {
+      background-color: var(--white);
+      border: 1px solid var(--neutral-gray);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .info-group {
+      margin-bottom: 1.5rem;
+    }
+    .info-group:last-child {
+      margin-bottom: 0;
+    }
+    .info-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+    }
+    .info-value {
+      color: var(--neutral-dark);
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .service-card {
+      background: var(--neutral-light);
+      border: 1px solid var(--neutral-gray);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+    .service-card:hover {
+      background: var(--white);
+      border-color: var(--accent-blue);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .service-icon {
+      font-size: 1.5rem;
+      color: var(--accent-blue);
+      margin-bottom: 0.75rem;
+    }
+    .service-card h4 {
+      font-size: 1.1rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.35rem;
+    }
+    .service-card p {
+      font-size: 0.875rem;
+      color: var(--neutral-medium);
+    }
+
+    @media (max-width: 992px) {
+      .eco-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a href="../index.html" class="logo">BRISKA</a>
-            <nav class="nav-menu">
-                <a href="../index.html">Beranda</a>
-                <a href="../tentang.html">Tentang Kami</a>
-                <a href="kelas-bisa.html" class="active">Ekosistem</a>
-            </nav>
-        </div>
-    </header>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-contact">
+        <a href="mailto:info@briska.co.id"><i class="fa-solid fa-envelope"></i> info@briska.co.id</a>
+      </div>
+    </div>
+  </div>
 
-    <section class="ecosystem-hero">
-        <div class="container hero-content">
-            <span class="category-badge">Pendidikan Non-Formal</span>
-            <h1>Kelas Bisa</h1>
-            <p class="tagline">"Bersama Kelas Bisa, Semua Bisa"</p>
-            <a href="https://kelasbisa.com" target="_blank" class="domain-link"><i class="fa-solid fa-globe"></i> kelasbisa.com</a>
-        </div>
-    </section>
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="../index.html" class="logo">
+        <strong style="font-size: 1.5rem; color: var(--primary-navy);">BRISKA</strong>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Beranda</a></li>
+          <li><a href="../tentang.html" class="nav-link">Tentang Kami</a></li>
+          <li><a href="../portal.html" class="nav-link active">Ekosistem</a></li>
+          <li><a href="../csr.html" class="nav-link">CSR & SDGs</a></li>
+          <li><a href="../kontak.html" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="ecosystem-detail section-padding">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-card">
-                    <i class="fa-solid fa-building"></i>
-                    <h4>Kategori Unit</h4>
-                    <p>Lembaga Kursus & Pelatihan</p>
-                </div>
-                <div class="info-card">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    <h4>Jadwal Operasional</h4>
-                    <p>Agustus 2025</p>
-                </div>
-                <div class="info-card">
-                    <i class="fa-solid fa-star"></i>
-                    <h4>Keunggulan Utama</h4>
-                    <p>Kursus Online Terlengkap di Indonesia dengan Sistem LMS AI</p>
-                </div>
+  <!-- HERO SECTION -->
+  <section class="eco-hero">
+    <div class="container">
+      <span class="eco-badge">Pendidikan Non-Formal</span>
+      <h1>Kelas Bisa</h1>
+      <p class="tagline">"Bersama Kelas Bisa, Semua Bisa"</p>
+      <a href="https://kelasbisa.com" target="_blank" class="site-link">
+        <i class="fa-solid fa-globe"></i> kelasbisa.com <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT LAYOUT -->
+  <section class="section">
+    <div class="container">
+      <div class="eco-layout">
+        
+        <!-- SIDEBAR INFO -->
+        <aside class="eco-sidebar">
+          <div class="info-group">
+            <div class="info-label"><i class="fa-solid fa-building"></i> Kategori Unit</div>
+            <div class="info-value">Lembaga Kursus & Pelatihan</div>
+          </div>
+
+          <div class="info-group">
+            <div class="info-label"><i class="fa-solid fa-calendar-check"></i> Jadwal Operasional</div>
+            <div class="info-value">Agustus 2025</div>
+          </div>
+
+          <div class="info-group">
+            <div class="info-label"><i class="fa-solid fa-star"></i> Keunggulan Utama</div>
+            <div class="info-value">Kursus Online Terlengkap di Indonesia dengan Sistem LMS AI</div>
+          </div>
+        </aside>
+
+        <!-- MAIN DETAIL & SERVICES -->
+        <main class="eco-main">
+          <h2 class="section-title" style="margin-bottom: 0.5rem;">Layanan Kursus & Bimbingan</h2>
+          <p style="color: var(--neutral-medium);">Seluruh program unggulan yang berada di bawah naungan Kelas Bisa:</p>
+
+          <div class="services-grid">
+            
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-earth-americas"></i></div>
+              <h4>GEODATIS</h4>
+              <p>Training Data Sains Geospasial</p>
             </div>
 
-            <div class="services-wrapper section-margin">
-                <h2>Layanan Kursus & Bimbingan</h2>
-                <div class="service-cards-grid">
-                    <div class="service-item-card">
-                        <div class="icon-box"><i class="fa-solid fa-earth-americas"></i></div>
-                        <h3>GEODATIS</h3>
-                        <p>Training Data Sains Geospasial</p>
-                    </div>
-                    <div class="service-item-card">
-                        <div class="icon-box"><i class="fa-solid fa-trophy"></i></div>
-                        <h3>PILAR JUARA</h3>
-                        <p>Bimbel Seri Kompetisi</p>
-                    </div>
-                    <div class="service-item-card">
-                        <div class="icon-box"><i class="fa-solid fa-user-tie"></i></div>
-                        <h3>GATRA ADHIKA</h3>
-                        <p>Bimbel CPNS & Kedinasan</p>
-                    </div>
-                    <div class="service-item-card">
-                        <div class="icon-box"><i class="fa-solid fa-microscope"></i></div>
-                        <h3>ARPA</h3>
-                        <p>Training Riset & Publikasi</p>
-                    </div>
-                    <div class="service-item-card">
-                        <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <h3>NESTU</h3>
-                        <p>Bimbel Lulus PTN DN/LN</p>
-                    </div>
-                </div>
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-trophy"></i></div>
+              <h4>PILAR JUARA</h4>
+              <p>Bimbel Seri Kompetisi</p>
             </div>
-        </div>
-    </section>
 
-    <footer class="site-footer">
-        <div class="container text-center">
-            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+              <h4>GATRA ADHIKA</h4>
+              <p>Bimbel CPNS & Kedinasan</p>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-microscope"></i></div>
+              <h4>ARPA</h4>
+              <p>Training Riset & Publikasi</p>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h4>NESTU</h4>
+              <p>Bimbel Lulus PTN DN/LN</p>
+            </div>
+
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color: var(--white); margin-bottom: 1rem;">BRISKA</h3>
+          <p style="font-size: 0.9rem;">PT BRIMO SWARNINDO KARYAVARA (BRISKA) adalah perusahaan edukasi & teknologi terpadu yang berfokus membangun ekosistem pendidikan masa depan.</p>
         </div>
-    </footer>
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../tentang.html">Tentang Kami</a></li>
+            <li><a href="../portal.html">Ekosistem</a></li>
+            <li><a href="../csr.html">CSR & SDGs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Ekosistem</h4>
+          <ul class="footer-links">
+            <li><a href="kelas-bisa.html">Kelas Bisa</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Kontak</h4>
+          <p style="font-size: 0.9rem;">Email: info@briska.co.id</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
