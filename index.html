@@ -1,154 +1,242 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT. Brimo Swarnindo Karyavara | Education Ecosystem</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT Brimo Swarnindo Karyavara - Ekosistem Pendidikan Terpadu & Riset</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/pages/home.css" />
+  <link rel="stylesheet" href="/assets/css/responsive.css" />
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <span class="logo-highlight">BRISKA</span> Corporation
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#ecosystem">Ekosistem</a></li>
-                <li><a href="#affiliates">Afiliasi</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="container hero-content">
-            <div class="badge">GEN-Z CORP</div>
-            <h1>Membangun Masa Depan Melalui <span class="text-gradient">Ekosistem Pendidikan</span></h1>
-            <p class="hero-subtitle">PT. BRIMO SWARNINDO KARYAVARA merupakan holding company yang berfokus pada inovasi, pendidikan, teknologi, dan pengembangan sumber daya manusia berstandar global.</p>
-            <div class="hero-cta">
-                <a href="#ecosystem" class="btn btn-primary">Jelajahi Ekosistem</a>
-                <a href="#about" class="btn btn-outline">Pelajari Lebih Lanjut</a>
-            </div>
-            <div class="sdg-goals">
-                <span>Mendukung SDGs:</span>
-                <div class="sdg-badges">
-                    <span class="sdg-badge">4 (Pendidikan Bermutu)</span>
-                    <span class="sdg-badge">8 (Pekerjaan Layak)</span>
-                    <span class="sdg-badge">9 (Inovasi & Infrastruktur)</span>
-                    <span class="sdg-badge">17 (Kemitraan)</span>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!-- Placeholder Header (Dimuat via components.js) -->
+  <div id="header-placeholder"></div>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Profil Perusahaan</h2>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="about-grid">
-                <div class="about-card core-values">
-                    <div class="icon-wrapper"><i class="fas fa-gem"></i></div>
-                    <h3>Core Values: CISDO IKHLAS</h3>
-                    <ul class="values-list">
-                        <li><strong>C</strong>ustomer Oriented</li>
-                        <li><strong>I</strong>nnovation Oriented</li>
-                        <li><strong>S</strong>taff Oriented</li>
-                        <li><strong>D</strong>evotion Oriented</li>
-                        <li><strong>O</strong>rganization Oriented</li>
-                    </ul>
-                </div>
-                
-                <div class="about-card director-quote">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="quote-text">"Berkarya dengan integritas, melayani dengan kualitas, dan berinovasi untuk kesejahteraan bersama."</p>
-                    <div class="director-info">
-                        <div class="director-avatar">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div>
-                            <h4>Bagus Primohadi</h4>
-                            <p>Direktur</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge-hero"><i class="fas fa-graduation-cap"></i> Briska Education Ecosystem</span>
+        <h1 class="hero-title">Membangun Masa Depan Pendidikan Melalui Inovasi, Riset, dan Teknologi.</h1>
+        <p class="hero-description">
+          PT Brimo Swarnindo Karyavara menghadirkan ekosistem pendidikan terpadu—mulai dari lembaga pelatihan non-formal, penerbitan digital, EdTech, jaringan event riset, konsultan sertifikasi, hingga sekolah formal berbasis kearifan lokal.
+        </p>
+        <div class="hero-cta">
+          <a href="#ekosistem" class="btn btn-primary">Jelajahi Ekosistem <i class="fas fa-arrow-right"></i></a>
+          <a href="/tentang.html" class="btn btn-outline">Tentang Perusahaan</a>
         </div>
-    </section>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="hero-card-badge">
+          <i class="fas fa-certificate"></i>
+          <div>
+            <strong>CISDO IKHLAS</strong>
+            <span>Core Values Enterprise</span>
+          </div>
+        </div>
+        <img src="/assets/images/documentation/hero-banner.png" alt="Briska Education Activity" class="hero-img" />
+      </div>
+    </div>
+  </section>
 
-    <!-- Ecosystem Section (Rendered via JS) -->
-    <section id="ecosystem" class="section ecosystem-section bg-light">
-        <div class="container">
-            <div class="section-header center">
-                <h2>Briska Education Ecosystem</h2>
-                <p>Sinergi berbagai lembaga untuk menciptakan ekosistem pendidikan yang holistik, inovatif, dan berdampak.</p>
-                <div class="divider center-div"></div>
-            </div>
-            
-            <!-- Cards will be injected here by config.js -->
-            <div id="ecosystem-grid" class="ecosystem-grid"></div>
-        </div>
-    </section>
+  <!-- DASHBOARD PENCAPAIAN & PENGHARGAAN -->
+  <section class="section dashboard-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Daftar Rekam Jejak</span>
+        <h2 class="section-title">Dashboard Pencapaian & Dampak</h2>
+        <p class="section-description">Akselerasi pencapaian Briska dalam melayani peserta didik, akademisi, dan mitra profesional.</p>
+      </div>
 
-    <!-- Affiliates Section -->
-    <section id="affiliates" class="section affiliates-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Layanan & Produk Afiliasi Briska</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="affiliates-grid">
-                <div class="affiliate-card">
-                    <i class="fas fa-flask"></i>
-                    <h3>Briska Laboratory & Research Center</h3>
-                </div>
-                <div class="affiliate-card">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Briska Journal</h3>
-                </div>
-                <div class="affiliate-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Briska Incubator Academy</h3>
-                </div>
-            </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-number" data-target="15000">0</div>
+          <p class="stat-label">Alumni & Peserta Didik</p>
         </div>
-    </section>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-book"></i></div>
+          <div class="stat-number" data-target="350">0</div>
+          <p class="stat-label">Buku Diterbitkan (ISBN)</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-award"></i></div>
+          <div class="stat-number" data-target="45">0</div>
+          <p class="stat-label">Penghargaan & Hibah Riset</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+          <div class="stat-number" data-target="80">0</div>
+          <p class="stat-label">Mitra Lembaga & Instansi</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <h3>PT. BRIMO SWARNINDO KARYAVARA</h3>
-                <p class="address"><i class="fas fa-map-marker-alt"></i> Perum. Mustika Mulia, Blok B5 No.08, Jl. Racing Centre, Karampuang, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</p>
-            </div>
-            <div class="footer-contact">
-                <h4>Hubungi Kami</h4>
-                <ul class="contact-list">
-                    <li><i class="fas fa-envelope"></i> info@briska.co.id</li>
-                    <li><i class="fas fa-globe"></i> www.briska.co.id</li>
-                    <li><i class="fas fa-phone"></i> 08119944511</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 PT. Brimo Swarnindo Karyavara. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- DAMPAK PERUSAHAAN & SDGS -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Komitmen Pembangunan Berkelanjutan</span>
+        <h2 class="section-title">Dampak Perusahaan bagi Masyarakat</h2>
+        <p class="section-description">Seluruh unit bisnis Briska diselaraskan dengan Sustainable Development Goals (SDGs).</p>
+      </div>
 
-    <!-- Scripts -->
-    <script src="config.js"></script>
+      <div class="sdg-grid">
+        <div class="sdg-card">
+          <div class="sdg-badge sdg-4">Goal 4</div>
+          <h3>Pendidikan Berkualitas</h3>
+          <p>Akses pelatihan kompetitif, bimbingan masuk PTN, bimbel CPNS, serta platform pembelajaran AI yang inklusif.</p>
+        </div>
+        <div class="sdg-card">
+          <div class="sdg-badge sdg-8">Goal 8</div>
+          <h3>Pekerjaan Layak & Pertumbuhan Ekonomi</h3>
+          <p>Meningkatkan keterampilan vokasional, data sains geospasial, dan sertifikasi profesi terakreditasi BNSP/APACA.</p>
+        </div>
+        <div class="sdg-card">
+          <div class="sdg-badge sdg-9">Goal 9</div>
+          <h3>Industri, Inovasi, & Infrastruktur</h3>
+          <p>Mengembangkan perangkat produktivitas EdTech dan sistem LMS cerdas untuk mendukung infrastruktur digital.</p>
+        </div>
+        <div class="sdg-card">
+          <div class="sdg-badge sdg-17">Goal 17</div>
+          <h3>Kemitraan untuk Mencapai Tujuan</h3>
+          <p>Membangun kolaborasi strategis antara akademisi, industri, lembaga pemerintah, dan komunitas pendidikan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EKOSISTEM BISNIS BRISKA -->
+  <section class="section" id="ekosistem">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">6 Pilar Utama</span>
+        <h2 class="section-title">Peta Ekosistem Bisnis Briska</h2>
+        <p class="section-description">Infrastruktur bisnis terpadu dengan peta jalan operasional yang berkelanjutan.</p>
+      </div>
+
+      <div class="ecosystem-grid">
+        <!-- 1. Kelas Bisa -->
+        <div class="card eco-card">
+          <div class="eco-header">
+            <span class="status-badge status-active">Operasional Ags 2025</span>
+            <h3>Kelas Bisa</h3>
+          </div>
+          <p class="eco-domain">kelasbisa.com</p>
+          <p class="eco-desc">LKP & Kursus Online berbasis LMS AI: Geodatis, Pilarjuara, Gatra Adhika, ARPA, dan Nestu.</p>
+          <a href="/ekosistem/kelas-bisa.html" class="eco-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 2. Pena Bisa -->
+        <div class="card eco-card">
+          <div class="eco-header">
+            <span class="status-badge status-active">Operasional Juni 2025</span>
+            <h3>Pena Bisa</h3>
+          </div>
+          <p class="eco-domain">penabisa.com</p>
+          <p class="eco-desc">Penerbitan self-publishing, jasa ISBN/HAKI, konversi skripsi ke buku, dan Pena Store.</p>
+          <a href="/ekosistem/pena-bisa.html" class="eco-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 3. Pakkakasa Digipro -->
+        <div class="card eco-card">
+          <div class="eco-header">
+            <span class="status-badge status-upcoming">Operasional Nov 2026</span>
+            <h3>Pakkakasa Digipro</h3>
+          </div>
+          <p class="eco-domain">pakkakasa.com</p>
+          <p class="eco-desc">Industri EdTech, template dokumen produktivitas, aplikasi mobile, dan perangkat AI learning.</p>
+          <a href="/ekosistem/pakkakasa-digipro.html" class="eco-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 4. Barugahub -->
+        <div class="card eco-card">
+          <div class="eco-header">
+            <span class="status-badge status-planned">Operasional Apr 2027</span>
+            <h3>Barugahub</h3>
+          </div>
+          <p class="eco-domain">barugahub.com</p>
+          <p class="eco-desc">Event & Komunitas Riset: Penyelenggara kompetisi ilmiah nasional, webinar, & Teacher Summit.</p>
+          <a href="/ekosistem/barugahub.html" class="eco-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 5. APACA Consulting -->
+        <div class="card eco-card">
+          <div class="eco-header">
+            <span class="status-badge status-planned">Operasional Apr 2027</span>
+            <h3>APACA Consulting</h3>
+          </div>
+          <p class="eco-domain">apacaconsulting.com</p>
+          <p class="eco-desc">Konsultan sertifikasi BNSP & APACA, Assessment Center, Student Profiling, & School Audit.</p>
+          <a href="/ekosistem/apaca-consulting.html" class="eco-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 6. SMA Celebes Macca -->
+        <div class="card eco-card">
+          <div class="eco-header">
+            <span class="status-badge status-planned">Operasional Apr 2030</span>
+            <h3>SMA Celebes Macca</h3>
+          </div>
+          <p class="eco-domain">celebesmacca.sch.id</p>
+          <p class="eco-desc">Sekolah Menengah Formal Boarding School dengan Kurikulum Oxford terintegrasi kearifan lokal.</p>
+          <a href="/ekosistem/sma-celebes-macca.html" class="eco-link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOKUMENTASI PENTING -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Galeri & Aktivitas</span>
+        <h2 class="section-title">Dokumentasi Penting Kegiatan</h2>
+        <p class="section-description">Gambaran nyata kegiatan pelatihan, riset, dan seminar yang telah diselenggarakan.</p>
+      </div>
+
+      <div class="doc-grid">
+        <div class="doc-item">
+          <img src="/assets/images/documentation/doc-1.jpg" alt="Pelatihan Riset Geospasial" />
+          <div class="doc-overlay">
+            <h4>Training Geodatis</h4>
+            <p>Pelatihan Riset Data Sains Geospasial</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <img src="/assets/images/documentation/doc-2.jpg" alt="Penyerahan Sertifikasi & Buku" />
+          <div class="doc-overlay">
+            <h4>Pena Bisa Publishing</h4>
+            <p>Penyerahan Sertifikat HAKI & Buku ISBN</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <img src="/assets/images/documentation/doc-3.jpg" alt="Seminar Nasional Barugahub" />
+          <div class="doc-overlay">
+            <h4>Barugahub Event</h4>
+            <p>Kompetisi Riset & Seminar Pendidikan Nasional</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder Footer (Dimuat via components.js) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
 </body>
 </html>
