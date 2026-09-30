@@ -11,14 +11,18 @@ function initNavigation() {
   // 1. Toggle Mobile Menu Bar
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
+      const isActive = navMenu.classList.toggle("active");
+      mobileToggle.setAttribute("aria-expanded", isActive);
+
       const icon = mobileToggle.querySelector("i");
-      if (navMenu.classList.contains("active")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
-      } else {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
+      if (icon) {
+        if (isActive) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
       }
     });
   }
@@ -30,7 +34,8 @@ function initNavigation() {
       dropdownToggle.addEventListener("click", function (e) {
         if (window.innerWidth <= 992) {
           e.preventDefault();
-          dropdown.classList.toggle("active");
+          const isExpanded = dropdown.classList.toggle("active");
+          dropdownToggle.setAttribute("aria-expanded", isExpanded);
         }
       });
     }
@@ -42,8 +47,18 @@ function initNavigation() {
 
   navLinks.forEach((link) => {
     const linkPath = link.getAttribute("href");
-    if (linkPath && currentPath.endsWith(linkPath) && linkPath !== "#") {
+    if (!linkPath || linkPath === "#") return;
+
+    // Bersihkan path untuk pencocokan yang tepat
+    const cleanLinkPath = linkPath.replace(/^\//, "");
+    const cleanCurrentPath = currentPath.replace(/^\//, "");
+
+    const isHome = (cleanCurrentPath === "" || cleanCurrentPath === "index.html") && cleanLinkPath.includes("index.html");
+    const isMatch = cleanCurrentPath.endsWith(cleanLinkPath);
+
+    if (isHome || isMatch) {
       link.classList.add("active");
+
       // Highlight induk dropdown jika sub-item aktif
       const parentDropdown = link.closest(".dropdown");
       if (parentDropdown) {
@@ -54,16 +69,18 @@ function initNavigation() {
   });
 }
 
-// Smooth Scroll for Anchor Links
+// 4. Smooth Scroll for Anchor Links (Navigasi Halaman)
 document.addEventListener("click", function (e) {
-  if (e.target.matches('a[href^="#"]')) {
-    const targetId = e.target.getAttribute("href");
-    if (targetId !== "#") {
+  const anchor = e.target.closest('a[href^="#"]');
+  if (anchor) {
+    const targetId = anchor.getAttribute("href");
+    if (targetId && targetId !== "#") {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
         targetElement.scrollIntoView({
-          behavior: "smooth"
+          behavior: "smooth",
+          block: "start"
         });
       }
     }
