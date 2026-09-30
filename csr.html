@@ -3,66 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengabdian & SDGs - BRISKA</title>
+    <title>Pengabdian & SDGs - PT BRIMO SWARNINDO KARYAVARA</title>
+    <meta name="description" content="Inisiatif sosial, program beasiswa, dan pengabdian masyarakat PT Brimo Swarnindo Karyavara melalui ekosistem Kelas Bisa." />
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Base & Page Styling -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/pages/csr.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">BRISKA</a>
-            <nav class="nav-menu">
-                <a href="index.html">Beranda</a>
-                <a href="tentang.html">Tentang Kami</a>
-                <a href="csr.html" class="active">CSR & SDGs</a>
-                <a href="portal.html">Portal Hub</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Placeholder Header (Dimuat via components.js) -->
+    <div id="header-placeholder"></div>
 
+    <!-- Hero Section -->
     <section class="csr-hero">
-        <div class="container hero-content">
-            <span class="category-badge">Pengabdian Kepada Masyarakat</span>
+        <div class="container hero-content text-center">
+            <span class="badge-csr"><i class="fas fa-hand-holding-heart" style="margin-right: 6px;"></i> Pengabdian Kepada Masyarakat</span>
             <h1>Inisiatif Sosial & Program SDGs</h1>
-            <p class="tagline">
+            <blockquote class="csr-quote">
                 "Akses pendidikan adalah hak semua orang, bukan hak istimewa. Kelas Bisa hadir bukan hanya untuk yang mampu membayar, tapi juga untuk mereka yang ingin belajar tapi belum punya jalan."
-            </p>
+            </blockquote>
         </div>
     </section>
 
-    <section class="csr-programs section-padding">
+    <!-- Program Pengabdian -->
+    <section class="csr-programs section-padding bg-light">
         <div class="container">
             <div class="section-header text-center">
                 <h2>Program Pengabdian Kelas Bisa</h2>
-                <p>Bentuk komitmen penuh Briska Corp dalam inklusi pendidikan dan pilar SDGs.</p>
+                <p class="section-description">Bentuk komitmen penuh BRISKA dalam inklusi pendidikan dan pencapaian pilar SDGs.</p>
             </div>
 
             <div class="table-responsive margin-top-lg">
                 <table class="csr-table">
                     <thead>
                         <tr>
-                            <th>Program</th>
-                            <th>Deskripsi Singkat</th>
+                            <th style="width: 35%;">Program Utama</th>
+                            <th>Deskripsi & Bentuk Dampak</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Kelas Gratis Freemium Zoominar</strong></td>
-                            <td>Pelatihan gratis edukasi kepada publik</td>
+                            <td>
+                                <strong>Kelas Gratis Freemium Zoominar</strong>
+                                <span class="program-tag">Inklusi Publik</span>
+                            </td>
+                            <td>Pelatihan gratis edukasi kepada publik untuk memperluas akses pengetahuan sains dan teknologi.</td>
                         </tr>
                         <tr>
-                            <td><strong>Beasiswa Kelas Bisa</strong></td>
-                            <td>Akses kelas, sertifikat, & coaching gratis bagi siswa dari keluarga tidak mampu khususnya daerah 3T serta anak yatim piatu</td>
+                            <td>
+                                <strong>Beasiswa Kelas Bisa</strong>
+                                <span class="program-tag tag-accent">Keluarga Prasejahtera & 3T</span>
+                            </td>
+                            <td>Akses kelas, sertifikat, dan <em>coaching</em> gratis bagi siswa dari keluarga tidak mampu, daerah 3T, serta anak yatim piatu.</td>
                         </tr>
                         <tr>
-                            <td><strong>Pemberdayaan Pelatihan Karier Digital</strong></td>
-                            <td>Workshop keterampilan bisnis digital bersertifikat untuk guru honorer, pemuda tunakarya, dan remaja putus sekolah/kuliah</td>
+                            <td>
+                                <strong>Pemberdayaan Pelatihan Karier Digital</strong>
+                                <span class="program-tag">Vokasional</span>
+                            </td>
+                            <td>Workshop keterampilan bisnis digital bersertifikat untuk guru honorer, pemuda tunakarya, dan remaja putus sekolah/kuliah.</td>
                         </tr>
                         <tr>
-                            <td><strong>Program Sekolah Mitra Gratis</strong></td>
-                            <td>Kelas gratis untuk sekolah terpencil yang ingin jadi mitra pengembangan akademik & lomba nasional</td>
+                            <td>
+                                <strong>Program Sekolah Mitra Gratis</strong>
+                                <span class="program-tag tag-accent">Kemitraan Daerah Terpencil</span>
+                            </td>
+                            <td>Kelas gratis untuk sekolah terpencil yang ingin menjadi mitra pengembangan akademik dan kompetisi nasional.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -70,11 +85,12 @@
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="container text-center">
-            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- Placeholder Footer (Dimuat via components.js) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
