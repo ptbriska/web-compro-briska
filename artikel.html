@@ -51,11 +51,11 @@
                 <div class="sidebar-widget">
                     <h3><i class="fa-solid fa-folder-open"></i> Kategori</h3>
                     <ul class="category-list">
-                        <li><a href="#">Edukasi & Teknologi <span>(12)</span></a></li>
-                        <li><a href="#">Pengabdian & SDGs <span>(8)</span></a></li>
-                        <li><a href="#">Kompetisi & Prestasi <span>(5)</span></a></li>
-                        <li><a href="#">Riset & Publikasi <span>(9)</span></a></li>
-                        <li><a href="#">Info Perusahaan <span>(4)</span></a></li>
+                        <li><a href="#">Edukasi & Teknologi</a></li>
+                        <li><a href="#">Pengabdian & SDGs</a></li>
+                        <li><a href="#">Kompetisi & Prestasi</a></li>
+                        <li><a href="#">Riset & Publikasi</a></li>
+                        <li><a href="#">Info Perusahaan</a></li>
                     </ul>
                 </div>
 
@@ -73,94 +73,27 @@
                     </div>
                 </div>
 
-                <!-- Riwayat Berita Upload (Arsip) -->
+                <!-- Riwayat Berita Upload (Arsip Dinamis) -->
                 <div class="sidebar-widget">
                     <h3><i class="fa-solid fa-clock-rotate-left"></i> Arsip Terbaru</h3>
-                    <ul class="archive-list">
-                        <li>
-                            <a href="artikel-detail.html?file=2026-09-30-peluncuran-lms-ai">
-                                <span class="archive-date">30 Sep 2026</span>
-                                <span class="archive-title">Perkembangan Ekosistem Pendidikan Digital BRISKA</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="artikel-detail.html?file=2026-09-25-beasiswa-kelas-bisa-3t">
-                                <span class="archive-date">25 Sep 2026</span>
-                                <span class="archive-title">Program Beasiswa Kelas Bisa Menyasar Ratusan Pelajar Daerah 3T</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="artikel-detail.html?file=2026-09-10-layanan-isbn-pena-bisa">
-                                <span class="archive-date">10 Sep 2026</span>
-                                <span class="archive-title">Pena Bisa Membuka Layanan PoD untuk Penulis Lokal</span>
-                            </a>
-                        </li>
+                    <ul class="archive-list" id="archive-list-container">
+                        <li><span class="archive-title">Memuat arsip...</span></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- PANEL KANAN: Daftar Berita & Artikel Utama -->
             <section class="news-content-right">
-                <!-- Headline / Berita Utama -->
-                <article class="featured-news-card">
-                    <div class="featured-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" alt="Featured News" class="featured-img">
-                        <span class="badge-category">Edukasi & Teknologi</span>
-                    </div>
-                    <div class="featured-news-body">
-                        <div class="news-meta">
-                            <span><i class="fa-regular fa-calendar"></i> 30 September 2026</span>
-                            <span><i class="fa-regular fa-user"></i> Tim Redaksi</span>
-                        </div>
-                        <h2><a href="artikel-detail.html?file=2026-09-30-peluncuran-lms-ai">Transformasi Pendidikan Non-Formal Melalui LMS AI Kelas Bisa</a></h2>
-                        <p>BRISKA secara resmi memperkenalkan sistem pembelajaran berbasis Artificial Intelligence untuk mendukung akses pendidikan yang adil dan inklusif di seluruh wilayah Indonesia...</p>
-                        <a href="artikel-detail.html?file=2026-09-30-peluncuran-lms-ai" class="btn-read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
+                <!-- Headline / Berita Utama (Dinamis) -->
+                <div id="featured-news-container">
+                    <p style="text-align:center; padding: 3rem 0; color: var(--neutral-medium);">
+                        <i class="fas fa-circle-notch fa-spin fa-2x"></i><br><br>Memuat berita terbaru...
+                    </p>
+                </div>
 
-                <!-- Grid Berita Lainnya -->
-                <div class="news-grid margin-top-lg">
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="artikel/image/2026-09-30-gambar-berita2.png" alt="Beasiswa Kelas Bisa" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop';">
-                            <span class="badge-category">Pengabdian & SDGs</span>
-                        </div>
-                        <div class="news-card-body">
-                            <div class="news-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 25 Sep 2026</span>
-                            </div>
-                            <h3><a href="artikel-detail.html?file=2026-09-25-beasiswa-kelas-bisa-3t">Program Beasiswa Kelas Bisa Menyasar Ratusan Pelajar Daerah 3T</a></h3>
-                            <p>Inisiatif pengabdian masyarakat untuk memberikan akses coaching dan kelas gratis bagi anak yatim dan daerah 3T.</p>
-                        </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="artikel/image/2026-09-30-gambar-berita2.png" alt="Kompetisi Barugahub" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop';">
-                            <span class="badge-category">Kompetisi</span>
-                        </div>
-                        <div class="news-card-body">
-                            <div class="news-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 18 Sep 2026</span>
-                            </div>
-                            <h3><a href="artikel-detail.html?file=2026-09-18-persiapan-barugahub-2027">Barugahub Bersiap Gelar Kompetisi Penelitian & Bisnis Nasional</a></h3>
-                            <p>Wadah kolaborasi siswa dan guru untuk memacu inovasi dan riset akademik di tingkat nasional.</p>
-                        </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="artikel/image/2026-09-30-gambar-berita2.png" alt="Layanan ISBN Pena Bisa" onerror="this.src='https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=600&auto=format&fit=crop';">
-                            <span class="badge-category">Riset & Publikasi</span>
-                        </div>
-                        <div class="news-card-body">
-                            <div class="news-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 10 Sep 2026</span>
-                            </div>
-                            <h3><a href="artikel-detail.html?file=2026-09-10-layanan-isbn-pena-bisa">Pena Bisa Fasilitasi Ratusan Penulis Pemula Mendapatkan ISBN</a></h3>
-                            <p>Dukungan self-publishing dan percetakan cepat Print on Demand (PoD) di Indonesia Timur.</p>
-                        </div>
-                    </article>
+                <!-- Grid Berita Lainnya (Dinamis) -->
+                <div class="news-grid margin-top-lg" id="news-grid-container">
+                    <!-- Berita urutan ke-2 dst akan dimuat di sini -->
                 </div>
 
                 <!-- Pagination -->
@@ -180,6 +113,156 @@
 
     <script src="assets/js/components.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- SCRIPT OTOMATISASI BACA JSON & FILE .MD -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // Format Tanggal (Mengubah YYYY-MM-DD menjadi DD MMMM YYYY)
+            function formatDate(dateString) {
+                const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                const date = new Date(dateString);
+                return isNaN(date) ? dateString : date.toLocaleDateString('id-ID', options);
+            }
+
+            // Fetch daftar file dari berita.json
+            fetch('artikel/berita.json')
+                .then(response => {
+                    if (!response.ok) throw new Error("Gagal mengambil artikel/berita.json");
+                    return response.json();
+                })
+                .then(async (data) => {
+                    if (!data || data.length === 0) return;
+
+                    const featuredContainer = document.getElementById('featured-news-container');
+                    const gridContainer = document.getElementById('news-grid-container');
+                    const archiveContainer = document.getElementById('archive-list-container');
+                    
+                    featuredContainer.innerHTML = '';
+                    gridContainer.innerHTML = '';
+                    archiveContainer.innerHTML = '';
+
+                    // Ambil isi dari setiap file .md secara paralel
+                    const articlesData = await Promise.all(data.map(async (item) => {
+                        try {
+                            const fileName = typeof item === 'string' ? item : item.file;
+                            const category = (typeof item === 'object' && item.category) ? item.category : "Edukasi";
+
+                            const res = await fetch(`artikel/${fileName}`);
+                            if (!res.ok) return null;
+                            const mdText = await res.text();
+                            
+                            // 1. Ekstrak Judul (# Judul)
+                            const titleMatch = mdText.match(/^#\s+(.*)/m);
+                            const title = titleMatch ? titleMatch[1] : "Artikel BRISKA";
+                            
+                            // 2. Ekstrak Gambar (![alt](url))
+                            const imgMatch = mdText.match(/!\[.*?\]\((.*?)\)/);
+                            let image = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop";
+                            if (imgMatch) {
+                                const rawImg = imgMatch[1];
+                                image = rawImg.startsWith('http') || rawImg.startsWith('/') ? rawImg : `artikel/${rawImg}`;
+                            }
+                            
+                            // 3. Ekstrak Tanggal dari Nama File (YYYY-MM-DD)
+                            const dateRaw = fileName.substring(0, 10);
+                            const formattedDate = formatDate(dateRaw);
+                            
+                            // 4. Ekstrak Snippet Teks Paragraf
+                            let cleanText = mdText.replace(/^#.*$/m, '')
+                                                  .replace(/!\[.*?\]\(.*?\)/g, '')
+                                                  .replace(/[*_>`#]/g, '')
+                                                  .replace(/MAKASSAR, \d+ [a-zA-Z]+ \d+ – /i, '')
+                                                  .trim();
+                            const snippet = cleanText.substring(0, 130) + (cleanText.length > 130 ? '...' : '');
+
+                            // 5. Slug ID untuk URL (tanpa .md)
+                            const fileId = fileName.replace('.md', '');
+
+                            return {
+                                id: fileId,
+                                title: title,
+                                image: image,
+                                date: formattedDate,
+                                category: category,
+                                snippet: snippet
+                            };
+                        } catch (e) {
+                            console.error("Gagal memuat file markdown:", item);
+                            return null;
+                        }
+                    }));
+
+                    const validArticles = articlesData.filter(a => a !== null);
+                    if (validArticles.length === 0) {
+                        featuredContainer.innerHTML = '<p class="text-center">Belum ada berita yang tersedia.</p>';
+                        return;
+                    }
+
+                    // A. Render Berita Pertama sebagai Headline
+                    const headline = validArticles[0];
+                    featuredContainer.innerHTML = `
+                        <article class="featured-news-card">
+                            <div class="featured-img-wrapper">
+                                <img src="${headline.image}" alt="${headline.title}" class="featured-img" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'">
+                                <span class="badge-category">${headline.category}</span>
+                            </div>
+                            <div class="featured-news-body">
+                                <div class="news-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> ${headline.date}</span>
+                                    <span><i class="fa-regular fa-user"></i> Tim Redaksi</span>
+                                </div>
+                                <h2><a href="artikel-detail.html?file=${headline.id}">${headline.title}</a></h2>
+                                <p>${headline.snippet}</p>
+                                <a href="artikel-detail.html?file=${headline.id}" class="btn-read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    `;
+
+                    // B. Render Berita Sisanya ke Grid
+                    for (let i = 1; i < validArticles.length; i++) {
+                        const article = validArticles[i];
+                        gridContainer.innerHTML += `
+                            <article class="news-card">
+                                <div class="news-thumb">
+                                    <img src="${article.image}" alt="${article.title}" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop';">
+                                    <span class="badge-category">${article.category}</span>
+                                </div>
+                                <div class="news-card-body">
+                                    <div class="news-meta">
+                                        <span><i class="fa-regular fa-calendar"></i> ${article.date}</span>
+                                    </div>
+                                    <h3><a href="artikel-detail.html?file=${article.id}">${article.title}</a></h3>
+                                    <p>${article.snippet}</p>
+                                </div>
+                            </article>
+                        `;
+                    }
+
+                    // C. Render Sidebar Arsip Terbaru (Maksimal 5 Berita)
+                    const maxArchive = validArticles.length > 5 ? 5 : validArticles.length;
+                    for (let i = 0; i < maxArchive; i++) {
+                        const archive = validArticles[i];
+                        archiveContainer.innerHTML += `
+                            <li>
+                                <a href="artikel-detail.html?file=${archive.id}">
+                                    <span class="archive-date">${archive.date}</span>
+                                    <span class="archive-title">${archive.title}</span>
+                                </a>
+                            </li>
+                        `;
+                    }
+                })
+                .catch(err => {
+                    console.error("Error:", err);
+                    document.getElementById('featured-news-container').innerHTML = `
+                        <p style="color:var(--accent-blue); text-align:center; padding: 2rem;">
+                            Gagal memuat berita secara otomatis. Pastikan file <code>artikel/berita.json</code> tersedia.
+                        </p>
+                    `;
+                });
+        });
+    </script>
 
 </body>
 </html>
