@@ -2,14 +2,20 @@
   <div class="container">
     <div class="footer-grid">
       <!-- Kolom 1: Profil Ringkas -->
-      <div class="footer-col">
+      <div class="footer-col brand-col">
         <h3 class="footer-title">PT Brimo Swarnindo Karyavara</h3>
-        <p style="color: var(--neutral-gray); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.6;">
-          <strong>Briska Education Corporation</strong> — Pelopor ekosistem pendidikan terpadu, riset, teknologi, dan konsul-sertifikasi di Indonesia.
+        <p class="footer-desc">
+          <strong>Briska Education Corporation</strong> — Pelopor ekosistem pendidikan terpadu, riset, teknologi, dan konsultan-sertifikasi di Indonesia.
         </p>
-        <p style="color: var(--neutral-gray); font-size: 0.85rem;">
+        <p class="footer-core-value">
           <em>Core Values: CISDO IKHLAS</em>
         </p>
+        <!-- Tambahan: Social Media Links -->
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
 
       <!-- Kolom 2: Navigasi Cepat -->
@@ -38,26 +44,30 @@
       </div>
 
       <!-- Kolom 4: Kontak Kantor -->
-      <div class="footer-col">
+      <div class="footer-col contact-col">
         <h4 class="footer-title">Kontak & Kantor Utama</h4>
-        <p style="color: var(--neutral-gray); font-size: 0.875rem; margin-bottom: 0.75rem; line-height: 1.5;">
-          <i class="fas fa-map-marker-alt" style="color: var(--accent-blue); margin-right: 6px;"></i>
-          Perum. Mustika Mulla, Blok B5 No. 08, Jl. Racing Centre, Karampuang, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231
-        </p>
-        <p style="color: var(--neutral-gray); font-size: 0.875rem; margin-bottom: 0.5rem;">
-          <i class="fas fa-phone" style="color: var(--accent-blue); margin-right: 6px;"></i>
-          <a href="tel:08119944511" style="color: inherit; text-decoration: none;">08119944511</a>
-        </p>
-        <p style="color: var(--neutral-gray); font-size: 0.875rem;">
-          <i class="fas fa-envelope" style="color: var(--accent-blue); margin-right: 6px;"></i>
-          <a href="mailto:info@briska.co.id" style="color: inherit; text-decoration: none;">info@briska.co.id</a>
-        </p>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>
+            Perum. Mustika Mulia, Blok B5 No. 08,<br> 
+            Jl. Racing Centre, Karampuang, Kec. Panakkukang,<br> 
+            Kota Makassar, Sulawesi Selatan 90231
+          </p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:08119944511">0811-9944-511</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@briska.co.id">info@briska.co.id</a>
+        </div>
       </div>
     </div>
 
     <!-- Copyright -->
     <div class="footer-bottom">
-      <p>&copy; 2026 PT Brimo Swarnindo Karyavara (Briska Education Corporation). All rights reserved.</p>
+      <p>&copy; <span id="currentYear">2026</span> PT Brimo Swarnindo Karyavara (Briska Education Corporation). All rights reserved.</p>
     </div>
   </div>
 </footer>
