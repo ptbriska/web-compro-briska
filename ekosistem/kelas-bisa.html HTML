@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas Bisa - BRISKA Education Ecosystem</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages/ekosistem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="logo">BRISKA</a>
+            <nav class="nav-menu">
+                <a href="../index.html">Beranda</a>
+                <a href="../tentang.html">Tentang Kami</a>
+                <a href="kelas-bisa.html" class="active">Ekosistem</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="ecosystem-hero">
+        <div class="container hero-content">
+            <span class="category-badge">Pendidikan Non-Formal</span>
+            <h1>Kelas Bisa</h1>
+            <p class="tagline">"Bersama Kelas Bisa, Semua Bisa"</p>
+            <a href="https://kelasbisa.com" target="_blank" class="domain-link"><i class="fa-solid fa-globe"></i> kelasbisa.com</a>
+        </div>
+    </section>
+
+    <section class="ecosystem-detail section-padding">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fa-solid fa-building"></i>
+                    <h4>Kategori Unit</h4>
+                    <p>Lembaga Kursus & Pelatihan</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h4>Jadwal Operasional</h4>
+                    <p>Agustus 2025</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-star"></i>
+                    <h4>Keunggulan Utama</h4>
+                    <p>Kursus Online Terlengkap di Indonesia dengan Sistem LMS AI</p>
+                </div>
+            </div>
+
+            <div class="services-wrapper section-margin">
+                <h2>Layanan Kursus & Bimbingan</h2>
+                <div class="service-cards-grid">
+                    <div class="service-item-card">
+                        <div class="icon-box"><i class="fa-solid fa-earth-americas"></i></div>
+                        <h3>GEODATIS</h3>
+                        <p>Training Data Sains Geospasial</p>
+                    </div>
+                    <div class="service-item-card">
+                        <div class="icon-box"><i class="fa-solid fa-trophy"></i></div>
+                        <h3>PILAR JUARA</h3>
+                        <p>Bimbel Seri Kompetisi</p>
+                    </div>
+                    <div class="service-item-card">
+                        <div class="icon-box"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3>GATRA ADHIKA</h3>
+                        <p>Bimbel CPNS & Kedinasan</p>
+                    </div>
+                    <div class="service-item-card">
+                        <div class="icon-box"><i class="fa-solid fa-microscope"></i></div>
+                        <h3>ARPA</h3>
+                        <p>Training Riset & Publikasi</p>
+                    </div>
+                    <div class="service-item-card">
+                        <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>NESTU</h3>
+                        <p>Bimbel Lulus PTN DN/LN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
