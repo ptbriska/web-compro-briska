@@ -119,3 +119,243 @@ img {
   color: var(--neutral-medium);
   font-size: 1.125rem;
 }
+
+/* ==========================================
+   1. GLOBAL HEADER & NAVIGATION
+   ========================================== */
+.site-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--neutral-gray);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.site-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  letter-spacing: -0.5px;
+}
+
+.site-logo span {
+  color: var(--accent-blue);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--neutral-dark);
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-blue);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-blue);
+  border-radius: 2px;
+}
+
+/* ==========================================
+   2. HERO BANNER
+   ========================================== */
+.hero-banner {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+  color: var(--white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-banner h1 {
+  color: var(--white);
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-banner p {
+  color: #CBD5E1; /* Muted Slate Light */
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   3. PORTAL HUB & GRID CARDS
+   ========================================== */
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.portal-card {
+  background-color: var(--white);
+  border: 1px solid var(--neutral-gray);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.portal-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--neutral-light);
+  color: var(--accent-blue);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+}
+
+.portal-card:hover .card-icon {
+  background-color: var(--accent-blue);
+  color: var(--white);
+}
+
+.portal-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-navy);
+}
+
+.portal-card p {
+  color: var(--neutral-medium);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ==========================================
+   4. CSR & TABLE STYLES
+   ========================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-gray);
+  box-shadow: var(--shadow-sm);
+}
+
+.csr-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+  text-align: left;
+}
+
+.csr-table th {
+  background-color: var(--primary-navy);
+  color: var(--white);
+  padding: 1.2rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.csr-table td {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--neutral-gray);
+  color: var(--neutral-dark);
+  font-size: 0.95rem;
+}
+
+.csr-table tr:last-child td {
+  border-bottom: none;
+}
+
+.csr-table tr:hover {
+  background-color: var(--neutral-light);
+}
+
+/* ==========================================
+   5. GLOBAL FOOTER
+   ========================================== */
+.site-footer {
+  background-color: var(--primary-navy);
+  color: var(--neutral-medium);
+  padding: 3rem 0;
+  margin-top: 5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  color: #94A3B8;
+}
+
+/* ==========================================
+   6. RESPONSIVE MOBILE DISPLAY
+   ========================================== */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    height: auto;
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .nav-menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+}
