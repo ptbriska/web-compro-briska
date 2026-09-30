@@ -16,8 +16,8 @@
   <div class="container navbar">
     <!-- Logo Perusahaan -->
     <a href="/index.html" class="logo" aria-label="Beranda PT Briska">
-      <!-- Pastikan path gambar relatif absolut dari root (menggunakan /) -->
-      <img src="/assets/images/logo/logo-briska.png" alt="Logo PT Brimo Swarnindo Karyavara" width="140" height="46" />
+      <img src="/assets/images/logo/logo-briska.png" alt="Logo PT Brimo Swarnindo Karyavara" width="140" height="46" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+      <span style="display: none; font-size: 1.5rem; color: var(--primary-navy); font-weight: 800;">BRISKA</span>
     </a>
 
     <!-- Menu Navigasi Utama -->
@@ -44,17 +44,15 @@
         <li><a href="/csr.html" class="nav-link">Pengabdian & CSR</a></li>
         <li><a href="/artikel.html" class="nav-link">Artikel</a></li>
         
-        <!-- Button Portal Akses untuk Mobile View -->
-        <li class="mobile-only">
-          <a href="/portal.html" class="btn btn-accent btn-mobile-portal">Akses Portal</a>
-        </li>
+        <!-- BAGIAN INI TELAH DIHAPUS UNTUK MENCEGAH TOMBOL GANDA -->
       </ul>
     </nav>
 
-    <!-- Tombol Akses Portal & Toggle Mobile -->
+    <!-- Tombol Akses Portal (Hanya 1 Tombol Utama di Nav Actions) -->
     <div class="nav-actions">
-      <a href="/portal.html" class="btn btn-accent desktop-only">Akses Portal <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+      <a href="/portal.html" class="btn btn-accent">Akses Portal <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
       
+      <!-- Tombol Burger Mobile (Tetap Dipertahankan) -->
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation" aria-expanded="false">
         <i class="fas fa-bars"></i>
       </button>
