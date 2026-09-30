@@ -8,18 +8,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function animateCounters() {
     statNumbers.forEach((counter) => {
-      const target = +counter.getAttribute("data-target");
-      const speed = 200; // Kecepatan animasi
-      const increment = Math.ceil(target / speed);
+      // Ambil nilai target dan bersihkan dari koma, titik, dll jika ada.
+      const rawTarget = counter.getAttribute("data-target") || "0";
+      const target = parseInt(rawTarget.replace(/,/g, '').replace(/\./g, ''), 10);
+      
+      // Ambil suffix tambahan (misal "+" atau "K")
+      const suffix = counter.getAttribute("data-suffix") || "";
+      
+      if (isNaN(target)) return; // Bypass jika data-target bukan angka
 
+      const speed = 200; // Pembagi kecepatan
+      const increment = Math.ceil(target / speed);
       let count = 0;
+
       const updateCount = () => {
         count += increment;
         if (count < target) {
-          counter.innerText = count.toLocaleString("id-ID") + "+";
+          counter.innerText = count.toLocaleString("id-ID") + suffix;
           setTimeout(updateCount, 15);
         } else {
-          counter.innerText = target.toLocaleString("id-ID") + "+";
+          // Pastikan nilai akhir tepat
+          counter.innerText = target.toLocaleString("id-ID") + suffix;
         }
       };
 
@@ -40,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 } // Animasi mulai saat 30% elemen terlihat
     );
 
     observer.observe(statsSection);
