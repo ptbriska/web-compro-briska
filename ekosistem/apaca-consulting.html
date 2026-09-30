@@ -4,70 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APACA Consulting - BRISKA Education Ecosystem</title>
+    <meta name="description" content="APACA Consulting: Pusat Sertifikasi & Konsultasi Pendidikan Terintegrasi (Asesmen Center, School Auditing, Sertifikasi BNSP)." />
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Base & Page Styling -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
     <link rel="stylesheet" href="../assets/css/pages/ekosistem.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a href="../index.html" class="logo">BRISKA</a>
-            <nav class="nav-menu">
-                <a href="../index.html">Beranda</a>
-                <a href="../tentang.html">Tentang Kami</a>
-                <a href="apaca-consulting.html" class="active">Ekosistem</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Placeholder Header (Dimuat via components.js) -->
+    <!-- Ingat, components.js akan otomatis menyesuaikan path ../components/header.html -->
+    <div id="header-placeholder"></div>
 
-    <section class="ecosystem-hero">
-        <div class="container hero-content">
+    <!-- Hero Section -->
+    <section class="eco-hero apaca-hero">
+        <div class="container hero-content text-center">
+            <!-- Logo dari aset atau icon -->
+            <div class="eco-brand-icon">
+                <i class="fa-solid fa-certificate"></i>
+            </div>
             <span class="category-badge">Sertifikasi & Konsultan</span>
             <h1>APACA Consulting</h1>
             <p class="tagline">"Asesmen Tepat, Sertifikasi Tepat"</p>
-            <a href="https://apacaconsulting.com" target="_blank" class="domain-link"><i class="fa-solid fa-globe"></i> apacaconsulting.com</a>
+            <div class="eco-cta">
+                <a href="https://apacaconsulting.com" target="_blank" class="btn btn-accent"><i class="fa-solid fa-globe" style="margin-right: 8px;"></i> Kunjungi Website Utama</a>
+            </div>
         </div>
     </section>
 
-    <section class="ecosystem-detail section-padding">
+    <!-- Info Bar / Overview -->
+    <section class="eco-overview">
         <div class="container">
             <div class="info-grid">
                 <div class="info-card">
-                    <i class="fa-solid fa-certificate"></i>
-                    <h4>Kategori Unit</h4>
-                    <p>Lembaga Sertifikasi & Konsultan</p>
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h4>Fokus Unit</h4>
+                    <p>Sertifikasi & Konsultan Pendidikan</p>
                 </div>
                 <div class="info-card">
                     <i class="fa-solid fa-calendar-check"></i>
-                    <h4>Jadwal Operasional</h4>
-                    <p>April 2027</p>
+                    <h4>Status Operasional</h4>
+                    <p>Mulai April 2027</p>
                 </div>
                 <div class="info-card">
                     <i class="fa-solid fa-star"></i>
-                    <h4>Keunggulan Utama</h4>
-                    <p>Pusat Sertifikasi dan Konsultasi Pendidikan Terintegrasi</p>
+                    <h4>Visi Keunggulan</h4>
+                    <p>Pusat Sertifikasi & Konsultasi Terintegrasi</p>
                 </div>
-            </div>
-
-            <div class="services-wrapper section-margin">
-                <h2>Layanan Konsultasi & Sertifikasi</h2>
-                <ul class="feature-list">
-                    <li><i class="fa-solid fa-check"></i> Asesmen Center</li>
-                    <li><i class="fa-solid fa-check"></i> Profiling Student & Career</li>
-                    <li><i class="fa-solid fa-check"></i> School Auditing</li>
-                    <li><i class="fa-solid fa-check"></i> Certification (BNSP & APACA)</li>
-                    <li><i class="fa-solid fa-check"></i> Advisory and Consultation</li>
-                </ul>
             </div>
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="container text-center">
-            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
+    <!-- Detail Layanan Utama -->
+    <section class="eco-services section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Layanan Konsultasi & Sertifikasi Pendidikan</h2>
+                <p class="section-description">Meningkatkan mutu sekolah dan kompetensi individu melalui audit dan asesmen berstandar nasional.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3>Asesmen Center</h3>
+                    <p>Pusat evaluasi kompetensi pendidik dan tenaga kependidikan untuk memastikan kualitas pengajaran yang sesuai standar industri dan kurikulum.</p>
+                </div>
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                    <h3>Profiling Student & Career</h3>
+                    <p>Layanan asesmen minat, bakat, dan potensi karir bagi peserta didik guna mengarahkan pemilihan jurusan dan masa depan profesional yang tepat.</p>
+                </div>
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-school-flag"></i></div>
+                    <h3>School Auditing</h3>
+                    <p>Audit manajerial dan akademik sekolah untuk mengukur kelayakan, kepatuhan regulasi, serta efektivitas program pendidikan.</p>
+                </div>
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Certification (BNSP & APACA)</h3>
+                    <p>Penyelenggaraan uji kompetensi dan penerbitan sertifikat profesi yang diakui oleh Badan Nasional Sertifikasi Profesi (BNSP) dan lisensi APACA.</p>
+                </div>
+                <div class="service-card">
+                    <div class="srv-icon"><i class="fa-solid fa-comments-dollar"></i></div>
+                    <h3>Advisory & Consultation</h3>
+                    <p>Konsultasi strategis pengembangan institusi pendidikan, penyusunan kurikulum muatan lokal, dan manajemen yayasan pendidikan.</p>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Call To Action & Kontak Ekosistem -->
+    <section class="eco-contact section-padding text-center">
+        <div class="container">
+            <h2>Butuh Konsultasi Tata Kelola Sekolah Anda?</h2>
+            <p>Jadwalkan sesi asesmen awal bersama tim ahli APACA Consulting untuk memetakan kebutuhan peningkatan mutu institusi Anda.</p>
+            <div class="margin-top-lg">
+                <a href="mailto:info@briska.co.id" class="btn btn-primary"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Hubungi Konsultan Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder Footer (Dimuat via components.js) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <!-- PASTIKAN path javascript naik satu folder (../) -->
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
 
 </body>
 </html>
