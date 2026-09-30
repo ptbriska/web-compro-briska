@@ -1,18 +1,24 @@
 # Transformasi Pendidikan Non-Formal Melalui LMS AI Kelas Bisa
 
-PT BRIMO SWARNINDO KARYAVARA (BRISKA) melalui unit bisnis **Kelas Bisa** terus membuktikan komitmennya dalam menghadirkan inovasi teknologi pendidikan di Indonesia. 
+![Peluncuran LMS AI Kelas Bisa](../assets/img/news-featured.jpg)
 
-Sistem pembelajaran digital berbasis *Artificial Intelligence* (LMS AI) kini telah terintegrasi penuh untuk memberikan pengalaman belajar yang personal, presisi, dan adaptif bagi seluruh peserta kursus.
+**MAKASSAR, 30 September 2026** – Dalam upaya mewujudkan akses pendidikan yang inklusif dan merata, **PT Brimo Swarnindo Karyavara (BRISKA)** melalui ekosistem pendidikan non-formalnya, **Kelas Bisa**, bersiap meluncurkan sistem manajemen pembelajaran (LMS) berbasis *Artificial Intelligence* (AI). Inovasi ini ditargetkan mulai beroperasi penuh pada Agustus tahun depan.
 
----
+Langkah ini sejalan dengan pilar *Sustainable Development Goals (SDGs)*, khususnya **Goal 4 (Pendidikan Berkualitas)** dan **Goal 9 (Industri, Inovasi & Infrastruktur)**. 
 
-## Keunggulan Utama LMS AI Kelas Bisa
+### Personalisasi Belajar dengan AI
 
-1. **Rekomendasi Materi Otomatis**: AI menganalisis tingkat pemahaman siswa dan menyajikan modul yang paling sesuai.
-2. **Evaluasi Real-time**: Latihan soal dan simulasi langsung terdeteksi kelemahan dan kekuatannya.
-3. **Integrasi Ekosistem**: Terhubung langsung dengan unit **Pakkakasa Digipro** dan platform **CBT BRISKA**.
+Berbeda dengan platform bimbingan belajar konvensional, LMS Kelas Bisa dirancang dengan algoritma kecerdasan buatan yang mampu melacak perkembangan, kelemahan, serta gaya belajar masing-masing peserta didik.
 
-> *"Akses pendidikan adalah hak semua orang, bukan hak istimewa. Kami hadir untuk membuka jalan bagi siapa saja yang ingin berkembang."*
+> *"Kami tidak ingin sekadar memindahkan papan tulis ke layar kaca. Inovasi AI yang kami bangun bertujuan untuk menjadi 'tutor privat digital' yang mengerti di materi mana seorang siswa sering tertinggal, lalu secara otomatis menyesuaikan kurikulum pelatihannya,"* ujar **Bagus Primohadi**, Direktur PT BRISKA.
 
-### Menjangkau Daerah 3T
-Melalui dukungan program CSR dan Pengabdian Masyarakat, platform ini juga secara gratis dibuka untuk para siswa penerima **Beasiswa Kelas Bisa** di wilayah 3T (Tertinggal, Terdepan, dan Terluar).
+### 5 Pilar Layanan Kelas Bisa
+
+Platform LMS AI ini nantinya akan langsung terintegrasi dengan lima program layanan unggulan Kelas Bisa, yaitu:
+1. **GEODATIS**: Pelatihan intensif Data Sains Geospasial.
+2. **PILAR JUARA**: Bimbingan persiapan Olimpiade Sains (OSN/KSN).
+3. **GATRA ADHIKA**: Bimbingan terpadu seleksi CPNS dan Kedinasan dengan simulasi CAT.
+4. **ARPA**: Pelatihan metodologi riset dan publikasi jurnal.
+5. **NESTU**: Bimbingan eksklusif lulus PTN (Dalam & Luar Negeri).
+
+Dengan berpegang teguh pada nilai perusahaan **CISDO** (*Customer, Innovation, Staff, Devotion, Organization Oriented*), BRISKA berharap teknologi ini mampu menjembatani kesenjangan fasilitas pendidikan, terutama bagi pelajar di kawasan Indonesia Timur.
