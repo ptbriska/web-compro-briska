@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel - BRISKA</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages/artikel-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Marked JS Library untuk Merender File .md ke HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">BRISKA</a>
+            <nav class="nav-menu">
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="csr.html">CSR & SDGs</a>
+                <a href="artikel.html" class="active">Artikel & Berita</a>
+                <a href="portal.html">Portal Hub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-detail-main section-padding">
+        <div class="container article-container">
+            
+            <a href="artikel.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke Daftar Artikel</a>
+
+            <article class="single-article">
+                <header class="article-header">
+                    <span class="badge-category" id="article-category">Edukasi & Teknologi</span>
+                    <h1 id="article-title">Memuat Judul Artikel...</h1>
+                    <div class="article-meta">
+                        <span><i class="fa-regular fa-calendar"></i> <span id="article-date">30 September 2026</span></span>
+                        <span><i class="fa-regular fa-user"></i> <span id="article-author">Redaksi BRISKA</span></span>
+                        <span><i class="fa-regular fa-eye"></i> <span id="article-views">1,240</span> dibaca</span>
+                    </div>
+                </header>
+
+                <div class="featured-image-wrapper">
+                    <img src="assets/img/news-featured.jpg" alt="Artikel Banner" id="article-banner">
+                </div>
+
+                <!-- Konten Markdown di-render di sini -->
+                <div class="article-body markdown-content" id="markdown-container">
+                    <p>Sedang memuat konten artikel dari folder <code>artikel/</code>...</p>
+                </div>
+
+                <!-- Interactive Bar: Like & Share -->
+                <div class="article-actions-bar">
+                    <button class="action-btn like-btn" id="likeBtn">
+                        <i class="fa-regular fa-heart"></i> Suka (<span id="likeCount">42</span>)
+                    </button>
+
+                    <div class="share-group">
+                        <span>Bagikan:</span>
+                        <a href="#" id="shareWA" target="_blank" class="share-icon wa"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" id="shareFB" target="_blank" class="share-icon fb"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" id="shareTW" target="_blank" class="share-icon tw"><i class="fa-brands fa-x-twitter"></i></a>
+                        <button class="share-icon copy-link" id="copyLinkBtn" title="Salin Link"><i class="fa-solid fa-link"></i></button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Section Komentar -->
+            <section class="comments-section margin-top-xl">
+                <h3><i class="fa-solid fa-comments"></i> Komentar (<span id="commentCount">2</span>)</h3>
+
+                <!-- Form Tambah Komentar -->
+                <form id="commentForm" class="comment-form">
+                    <div class="form-row">
+                        <input type="text" id="commentName" placeholder="Nama Anda*" required>
+                        <input type="email" id="commentEmail" placeholder="Email Anda*" required>
+                    </div>
+                    <textarea id="commentMessage" rows="4" placeholder="Tuliskan komentar atau tanggapan Anda..." required></textarea>
+                    <button type="submit" class="btn-submit-comment"><i class="fa-solid fa-paper-plane"></i> Kirim Komentar</button>
+                </form>
+
+                <!-- Daftar Komentar -->
+                <div class="comments-list margin-top-lg" id="commentsList">
+                    <div class="comment-item">
+                        <div class="comment-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <strong>Andi Pratama</strong>
+                                <span class="comment-time">30 Sep 2026, 14:20 WITA</span>
+                            </div>
+                            <p>Sangat menginspirasi! Semoga hadirnya LMS AI dari Kelas Bisa dapat membantu adik-adik di daerah 3T.</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-item">
+                        <div class="comment-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <strong>Siti Nurhaliza</strong>
+                                <span class="comment-time">30 Sep 2026, 15:05 WITA</span>
+                            </div>
+                            <p>Apakah program beasiswanya terbuka untuk jenjang pendaftaran bimbel CPNS juga?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script Logika Fitur Markdown, Like, Share & Komentar -->
+    <script>
+        // 1. Memuat file .md dari folder artikel/
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const fileName = urlParams.get('file') || '2026-09-30-peluncuran-lms-ai';
+            
+            fetch(`artikel/${fileName}.md`)
+                .then(response => {
+                    if(!response.ok) throw new Error('File artikel tidak ditemukan');
+                    return response.text();
+                })
+                .then(markdownText => {
+                    document.getElementById('markdown-container').innerHTML = marked.parse(markdownText);
+                })
+                .catch(err => {
+                    document.getElementById('markdown-container').innerHTML = `<p class="error-msg">Artikel belum tersedia atau file Markdown tidak ditemukan di folder <code>artikel/${fileName}.md</code>.</p>`;
+                });
+
+            // 2. Fitur Like
+            let isLiked = false;
+            let count = 42;
+            const likeBtn = document.getElementById('likeBtn');
+            const likeCount = document.getElementById('likeCount');
+
+            likeBtn.addEventListener('click', function() {
+                isLiked = !isLiked;
+                if(isLiked) {
+                    count++;
+                    likeBtn.classList.add('liked');
+                    likeBtn.innerHTML = `<i class="fa-solid fa-heart"></i> Menyukai (${count})`;
+                } else {
+                    count--;
+                    likeBtn.classList.remove('liked');
+                    likeBtn.innerHTML = `<i class="fa-regular fa-heart"></i> Suka (${count})`;
+                }
+            });
+
+            // 3. Fitur Share Link
+            const currentUrl = encodeURIComponent(window.location.href);
+            document.getElementById('shareWA').href = `https://api.whatsapp.com/send?text=${currentUrl}`;
+            document.getElementById('shareFB').href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+            document.getElementById('shareTW').href = `https://twitter.com/intent/tweet?url=${currentUrl}`;
+
+            document.getElementById('copyLinkBtn').addEventListener('click', function() {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link artikel berhasil disalin!');
+            });
+
+            // 4. Fitur Tambah Komentar Interaktif
+            const commentForm = document.getElementById('commentForm');
+            const commentsList = document.getElementById('commentsList');
+            const commentCount = document.getElementById('commentCount');
+            let totalComments = 2;
+
+            commentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('commentName').value;
+                const message = document.getElementById('commentMessage').value;
+
+                const newCommentHtml = `
+                    <div class="comment-item">
+                        <div class="comment-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <strong>${name}</strong>
+                                <span class="comment-time">Baru saja</span>
+                            </div>
+                            <p>${message}</p>
+                        </div>
+                    </div>
+                `;
+
+                commentsList.insertAdjacentHTML('afterbegin', newCommentHtml);
+                totalComments++;
+                commentCount.textContent = totalComments;
+                commentForm.reset();
+            });
+        });
+    </script>
+
+</body>
+</html>
