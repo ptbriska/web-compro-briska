@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabar & Artikel - BRISKA</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages/artikel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">BRISKA</a>
+            <nav class="nav-menu">
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="csr.html">CSR & SDGs</a>
+                <a href="artikel.html" class="active">Artikel & Berita</a>
+                <a href="portal.html">Portal Hub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="news-ticker-bar">
+        <div class="container">
+            <span class="ticker-label"><i class="fa-solid fa-bolt"></i> TERKINI</span>
+            <marquee behavior="scroll" direction="left" scrollamount="6">
+                BRISKA siap meluncurkan platform LMS AI Kelas Bisa pada Agustus 2025 • Program Beasiswa Kelas Bisa menyasar 3T • Pendaftaran Kompetisi Riset Barugahub dibuka segera.
+            </marquee>
+        </div>
+    </div>
+
+    <main class="news-main section-padding">
+        <div class="container news-layout">
+            
+            <!-- PANEL KIRI: Tag, Kategori & Riwayat Berita -->
+            <aside class="news-sidebar-left">
+                <!-- Pencarian Artikel -->
+                <div class="sidebar-widget search-widget">
+                    <h3><i class="fa-solid fa-magnifying-glass"></i> Cari Berita</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Kata kunci...">
+                        <button type="button"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Kategori -->
+                <div class="sidebar-widget">
+                    <h3><i class="fa-solid fa-folder-open"></i> Kategori</h3>
+                    <ul class="category-list">
+                        <li><a href="#">Edukasi & Teknologi <span>(12)</span></a></li>
+                        <li><a href="#">Pengabdian & SDGs <span>(8)</span></a></li>
+                        <li><a href="#">Kompetisi & Prestasi <span>(5)</span></a></li>
+                        <li><a href="#">Riset & Publikasi <span>(9)</span></a></li>
+                        <li><a href="#">Info Perusahaan <span>(4)</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Panel Tag Populer -->
+                <div class="sidebar-widget">
+                    <h3><i class="fa-solid fa-tags"></i> Tag Populer</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag-item">#KelasBisa</a>
+                        <a href="#" class="tag-item">#LMSAI</a>
+                        <a href="#" class="tag-item">#SDGs</a>
+                        <a href="#" class="tag-item">#Beasiswa3T</a>
+                        <a href="#" class="tag-item">#PenaBisa</a>
+                        <a href="#" class="tag-item">#Barugahub</a>
+                        <a href="#" class="tag-item">#InovasiDigital</a>
+                    </div>
+                </div>
+
+                <!-- Riwayat Berita Upload (Arsip) -->
+                <div class="sidebar-widget">
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Riwayat Upload</h3>
+                    <ul class="archive-list">
+                        <li>
+                            <a href="#">
+                                <span class="archive-date">30 Sep 2026</span>
+                                <span class="archive-title">Perkembangan Ekosistem Pendidikan Digital BRISKA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="archive-date">15 Agu 2025</span>
+                                <span class="archive-title">Peluncuran Kelas Bisa LMS Berbasis AI</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="archive-date">02 Jun 2025</span>
+                                <span class="archive-title">Pena Bisa Membuka Layanan PoD untuk Penulis Lokal</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- PANEL KANAN: Daftar Berita & Artikel Utama -->
+            <section class="news-content-right">
+                <!-- Headline / Berita Utama -->
+                <article class="featured-news-card">
+                    <div class="featured-img-wrapper">
+                        <img src="assets/img/news-featured.jpg" alt="Featured News" id="featured-img">
+                        <span class="badge-category">Edukasi & Teknologi</span>
+                    </div>
+                    <div class="featured-news-body">
+                        <div class="news-meta">
+                            <span><i class="fa-regular fa-calendar"></i> 30 September 2026</span>
+                            <span><i class="fa-regular fa-user"></i> Tim Redaksi</span>
+                        </div>
+                        <h2><a href="artikel-detail.html?file=2026-09-30-peluncuran-lms-ai">Transformasi Pendidikan Non-Formal Melalui LMS AI Kelas Bisa</a></h2>
+                        <p>BRISKA secara resmi memperkenalkan sistem pembelajaran berbasis Artificial Intelligence untuk mendukung akses pendidikan yang adil dan inklusif di seluruh wilayah Indonesia...</p>
+                        <a href="artikel-detail.html?file=2026-09-30-peluncuran-lms-ai" class="btn-read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Grid Berita Lainnya -->
+                <div class="news-grid margin-top-lg">
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="assets/img/news-1.jpg" alt="News 1">
+                            <span class="badge-category">Pengabdian & SDGs</span>
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 25 Sep 2026</span>
+                            </div>
+                            <h3><a href="artikel-detail.html?file=beasiswa-kelas-bisa-3t">Program Beasiswa Kelas Bisa Menyasar Ratusan Pelajar Daerah 3T</a></h3>
+                            <p>Inisiatif pengabdian masyarakat untuk memberikan akses coaching dan kelas gratis bagi anak yatim dan daerah 3T.</p>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="assets/img/news-2.jpg" alt="News 2">
+                            <span class="badge-category">Kompetisi</span>
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 18 Sep 2026</span>
+                            </div>
+                            <h3><a href="artikel-detail.html?file=persiapan-barugahub-2027">Barugahub Bersiap Gelar Kompetisi Penelitian & Bisnis Nasional</a></h3>
+                            <p>Wadah kolaborasi siswa dan guru untuk memacu inovasi dan riset akademik di tingkat nasional.</p>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-thumb">
+                            <img src="assets/img/news-3.jpg" alt="News 3">
+                            <span class="badge-category">Riset & Publikasi</span>
+                        </div>
+                        <div class="news-card-body">
+                            <div class="news-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 10 Sep 2026</span>
+                            </div>
+                            <h3><a href="artikel-detail.html?file=layanan-isbn-pena-bisa">Pena Bisa Fasilitasi Ratusan Penulis Pemula Mendapatkan ISBN</a></h3>
+                            <p>Dukungan self-publishing dan percetakan cepat Print on Demand (PoD) di Indonesia Timur.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link"><i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
