@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami - PT BRIMO SWARNINDO KARYAVARA (BRISKA)</title>
+    <meta name="description" content="Sejarah, visi-misi, legalitas NIB, dan profil PT Brimo Swarnindo Karyavara (Briska Education Corporation)." />
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <!-- Base & Page Styling -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/pages/tentang.css">
-    <!-- Font Awesome / Icons (Optional) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
-    <!-- Header / Navbar Placeholder -->
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">BRISKA</a>
-            <nav class="nav-menu">
-                <a href="index.html">Beranda</a>
-                <a href="tentang.html" class="active">Tentang Kami</a>
-                <a href="#kontak">Kontak</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Placeholder Header (Dimuat via components.js) -->
+    <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
     <section class="about-hero">
         <div class="container hero-content">
             <h1>Tentang BRISKA</h1>
-            <p>Dari Try Out Gratisan Menjadi Wadah Lebih Berdampak.</p>
+            <p>Dari Komunitas Try Out Menjadi Korporasi Edukasi Paling Berdampak.</p>
         </div>
     </section>
 
@@ -55,7 +54,7 @@
                     <div class="summary-box">
                         <i class="fa-solid fa-rocket"></i>
                         <h3>Berorientasi Masa Depan</h3>
-                        <p>Mengintegrasikan teknologi digital dan pola piker Gen-Z friendly.</p>
+                        <p>Mengintegrasikan teknologi digital dan pola pikir <em>Gen-Z friendly</em>.</p>
                     </div>
                 </div>
             </div>
@@ -65,9 +64,9 @@
     <!-- 2. Visi & Misi -->
     <section class="visi-misi section-padding bg-light">
         <div class="container">
-            <div class="section-title text-center">
+            <div class="section-header text-center">
                 <h2>Visi & Misi Perusahaan</h2>
-                <p>Arah dan tujuan kami dalam memajukan lanskap pendidikan Indonesia.</p>
+                <p class="section-description">Arah dan tujuan kami dalam memajukan lanskap pendidikan Indonesia.</p>
             </div>
             
             <div class="vm-grid">
@@ -92,11 +91,11 @@
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
-                            <span><strong>Kemitraan Strategis:</strong> Membangun kolaborasi yang kokoh dengan institusi pendidikan, sekolah, dan pemangku kepentingan untuk memperluas jangkauan dampak positif.</span>
+                            <span><strong>Kemitraan Strategis:</strong> Membangun kolaborasi yang kokoh dengan institusi pendidikan, sekolah, dan pemangku kepentingan untuk memperluas jangkauan.</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-circle-check"></i>
-                            <span><strong>Pengembangan Potensi:</strong> Menciptakan lingkungan kerja yang inklusif, sehat, dan solutif demi mendorong kreativitas dan potensi terbaik seluruh staf serta mitra.</span>
+                            <span><strong>Pengembangan Potensi:</strong> Menciptakan lingkungan kerja yang inklusif, sehat, dan solutif demi mendorong kreativitas.</span>
                         </li>
                     </ul>
                 </div>
@@ -107,9 +106,9 @@
     <!-- 3. Sejarah & Milestone -->
     <section class="milestone-section section-padding">
         <div class="container">
-            <div class="section-title text-center">
+            <div class="section-header text-center">
                 <h2>Sejarah & Milestone</h2>
-                <p>Perjalanan transformasi BRISKA dari masa ke masa.</p>
+                <p class="section-description">Perjalanan transformasi BRISKA dari masa ke masa.</p>
             </div>
 
             <div class="timeline">
@@ -118,10 +117,10 @@
                     <div class="timeline-dot">1</div>
                     <div class="timeline-content">
                         <span class="timeline-date">10 Januari 2018</span>
-                        <h3>Lahirnya Organisasi Semi-Profit POKI EDU</h3>
+                        <h3>Lahirnya Organisasi POKI EDU</h3>
                         <ul>
-                            <li>Didirikan oleh Bagus Primohadi Syahputra.</li>
-                            <li>Fokus awal: bimbingan olimpiade dan pelatihan ilmiah ilmu kebumian untuk siswa SMA melalui sistem komunitas.</li>
+                            <li>Didirikan oleh Bagus Primohadi.</li>
+                            <li>Fokus awal: bimbingan olimpiade dan pelatihan ilmiah ilmu kebumian.</li>
                         </ul>
                     </div>
                 </div>
@@ -131,11 +130,11 @@
                     <div class="timeline-dot">2</div>
                     <div class="timeline-content">
                         <span class="timeline-date">2019</span>
-                        <h3>Ekspansi Digital & Pemantapan Layanan</h3>
+                        <h3>Ekspansi Digital</h3>
                         <ul>
                             <li>Implementasi LMS Google Classroom.</li>
-                            <li>Mengembangkan model kurikulum sendiri untuk pelatihan OSN bidang kebumian.</li>
-                            <li>Try Out Gechan 1 berubah di 2019 dengan nama Try Out Poki 2 (TOP2).</li>
+                            <li>Mengembangkan model kurikulum kebumian sendiri.</li>
+                            <li>Try Out TOP2 diluncurkan.</li>
                         </ul>
                     </div>
                 </div>
@@ -145,11 +144,11 @@
                     <div class="timeline-dot">3</div>
                     <div class="timeline-content">
                         <span class="timeline-date">2020</span>
-                        <h3>Krisis COVID-19 sebagai Akselerasi Berbasis Online</h3>
+                        <h3>Akselerasi Berbasis Online</h3>
                         <ul>
-                            <li>Peluncuran YouTube Poki Edu & Modul Ajar Kebumian.</li>
-                            <li>Branding melalui Try Out Gratis meluas.</li>
-                            <li>Peluncuran produk Private Course Poki & Kerja Sama Sekolah Pertama Kali Terjalin.</li>
+                            <li>Peluncuran YouTube Poki Edu & Modul Ajar.</li>
+                            <li>Branding melalui Try Out Gratis.</li>
+                            <li>Kerja Sama B2B Sekolah Pertama Kali Terjalin.</li>
                         </ul>
                     </div>
                 </div>
@@ -159,11 +158,10 @@
                     <div class="timeline-dot">4</div>
                     <div class="timeline-content">
                         <span class="timeline-date">2021 - 2023</span>
-                        <h3>Eksperimen Model Bisnis & Validasi Pasar</h3>
+                        <h3>Validasi Pasar</h3>
                         <ul>
-                            <li>Diversifikasi Produk dicoba dan divalidasi (8 Produk untuk 8 Segmentasi Pasar).</li>
-                            <li>Intensifikasi Pemasaran B2B dengan kerja sama sekolah di 9 Provinsi.</li>
-                            <li>Branding Poki Edu Lebih Masif.</li>
+                            <li>Diversifikasi Produk (8 Produk untuk 8 Segmentasi).</li>
+                            <li>Kerja sama sekolah meluas ke 9 Provinsi.</li>
                         </ul>
                     </div>
                 </div>
@@ -172,12 +170,11 @@
                 <div class="timeline-item left">
                     <div class="timeline-dot">5</div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2024</span>
-                        <h3>Tahun Transisi & Rebranding Menuju Korporatisasi</h3>
+                        <span class="timeline-date">24 September 2024</span>
+                        <h3>Rebranding & Legalitas Korporasi</h3>
                         <ul>
-                            <li>AdSense YouTube 100 Juta Pertama dikumpulkan untuk Modal PT.</li>
                             <li>Rancang Business Plan Kelas Bisa.</li>
-                            <li><strong>24 September 2024:</strong> Legalisasi PT BRISKA.</li>
+                            <li><strong>Legalisasi PT BRISKA.</strong></li>
                             <li>Memulai Inkubasi Tahap 1 Sistem Perusahaan.</li>
                         </ul>
                     </div>
@@ -188,12 +185,11 @@
                     <div class="timeline-dot">6</div>
                     <div class="timeline-content">
                         <span class="timeline-date">2025</span>
-                        <h3>Inkubasi Sistem Manajemen Perusahaan & Uji Produk</h3>
+                        <h3>Inkubasi & Uji Sistem</h3>
                         <ul>
-                            <li>8 Maret: Uji Sistem Manajemen Korporat.</li>
                             <li>14 April: Launching Prototipe Produk.</li>
-                            <li>25 Juni: Sistem Manajemen Tahap 2 & 24 Sept: Evaluasi Manajemen.</li>
-                            <li>Oktober 2025 - Mei 2026: Nonaktif Operasional dan Inkubasi Tahap 2.</li>
+                            <li>24 Sept: Evaluasi Manajemen Korporat.</li>
+                            <li>Persiapan infrastruktur Ekosistem Terpadu.</li>
                         </ul>
                     </div>
                 </div>
@@ -203,12 +199,10 @@
                     <div class="timeline-dot"><i class="fa-solid fa-flag-checkered"></i></div>
                     <div class="timeline-content highlight">
                         <span class="timeline-date">2026 - 2030</span>
-                        <h3>Periode Operasional Tahap 1</h3>
+                        <h3>Operasional Tahap 1 & Ekspansi</h3>
                         <ul>
                             <li>Mei 2026: Peluncuran Brand Produk Final.</li>
-                            <li>Juni - Agustus 2026: Periode Uji Pasar.</li>
-                            <li>September 2026: Pembukaan Kelas Offline.</li>
-                            <li>Oktober 2026 - dst: Periode Operasional Tahap 1.</li>
+                            <li>Oktober 2026: Pembukaan Kelas LKP & Operasional Tahap 1 Penuh.</li>
                         </ul>
                     </div>
                 </div>
@@ -216,50 +210,37 @@
         </div>
     </section>
 
-    <!-- 4. Struktur Organisasi -->
-    <section class="org-structure section-padding bg-light text-center">
+    <!-- 4. Nilai Perusahaan (CISDO IKHLAS) -->
+    <section class="values-section section-padding bg-light">
         <div class="container">
-            <div class="section-title">
-                <h2>Struktur Organisasi</h2>
-            </div>
-            <div class="org-status-box">
-                <i class="fa-solid fa-diagram-project"></i>
-                <p>Saat ini struktur organisasi resmi <strong>masih dalam tahap pengembangan organisasi internal</strong> (unpublished) demi penyelarasan tata kelola manajemen korporat.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Nilai Perusahaan (CISDO IKHLAS) -->
-    <section class="values-section section-padding">
-        <div class="container">
-            <div class="section-title text-center">
+            <div class="section-header text-center">
                 <h2>Budaya & Nilai Perusahaan</h2>
-                <p>Kombinasi nilai spiritual-etis dan semangat modern generasi baru.</p>
+                <p class="section-description">Kombinasi nilai spiritual-etis dan semangat modern generasi baru.</p>
             </div>
 
             <!-- IKHLAS Grid -->
             <div class="value-block">
-                <h3 class="value-heading"><i class="fa-solid fa-compass"></i> IKHLAS — Fondasi Etika & Prinsip Moral <span>(Why We Work)</span></h3>
+                <h3 class="value-heading"><i class="fa-solid fa-compass"></i> IKHLAS — Fondasi Etika & Prinsip Moral</h3>
                 <div class="values-grid">
                     <div class="value-card">
                         <div class="letter">I</div>
                         <h4>Inovasi</h4>
-                        <p>Selalu mencari terobosan baru, berpikir out-of-the-box, dan adaptif terhadap perubahan zaman.</p>
+                        <p>Mencari terobosan baru, berpikir out-of-the-box, dan adaptif terhadap zaman.</p>
                     </div>
                     <div class="value-card">
                         <div class="letter">K</div>
                         <h4>Kualitas & Keandalan</h4>
-                        <p>Menyediakan produk dan layanan yang bermutu tinggi dan bisa dipercaya oleh pelanggan.</p>
+                        <p>Menyediakan produk dan layanan yang bermutu tinggi dan bisa dipercaya.</p>
                     </div>
                     <div class="value-card">
                         <div class="letter">H</div>
                         <h4>Harmoni</h4>
-                        <p>Membangun kolaborasi tim yang solid, ramah, dan saling menghargai dalam keberagaman.</p>
+                        <p>Membangun kolaborasi tim yang solid, ramah, dan saling menghargai.</p>
                     </div>
                     <div class="value-card">
                         <div class="letter">L</div>
                         <h4>Lestari</h4>
-                        <p>Berorientasi jangka panjang dan berkelanjutan dalam aspek bisnis, sosial, maupun lingkungan.</p>
+                        <p>Berorientasi jangka panjang dan berkelanjutan dalam aspek bisnis dan sosial.</p>
                     </div>
                     <div class="value-card">
                         <div class="letter">A</div>
@@ -276,12 +257,12 @@
 
             <!-- CISDO Grid -->
             <div class="value-block margin-top-lg">
-                <h3 class="value-heading"><i class="fa-solid fa-bolt"></i> CISDO — Wajah Modern & Gen-Z Friendly <span>(How We Work)</span></h3>
+                <h3 class="value-heading"><i class="fa-solid fa-bolt"></i> CISDO — Wajah Modern & Gen-Z Friendly</h3>
                 <div class="values-grid cisdo-grid">
                     <div class="value-card cisdo">
                         <div class="letter">C</div>
                         <h4>Customer Oriented</h4>
-                        <p>Setiap produk, keputusan, dan inovasi berpijak pada kebutuhan dan kepuasan pelanggan.</p>
+                        <p>Setiap inovasi berpijak pada kebutuhan dan kepuasan pelanggan.</p>
                     </div>
                     <div class="value-card cisdo">
                         <div class="letter">I</div>
@@ -291,16 +272,16 @@
                     <div class="value-card cisdo">
                         <div class="letter">S</div>
                         <h4>Staff Oriented</h4>
-                        <p>Karyawan adalah aset. Menciptakan lingkungan kerja sehat, bertumbuh, dan seimbang.</p>
+                        <p>Karyawan adalah aset. Menciptakan lingkungan kerja sehat dan seimbang.</p>
                     </div>
                     <div class="value-card cisdo">
                         <div class="letter">D</div>
                         <h4>Devotion Oriented</h4>
-                        <p>Bekerja bukan hanya demi kompensasi, tapi kontribusi nyata untuk kemajuan bersama.</p>
+                        <p>Bekerja demi kontribusi nyata untuk kemajuan bersama.</p>
                     </div>
                     <div class="value-card cisdo">
                         <div class="letter">O</div>
-                        <h4>Gen-Z Company</h4>
+                        <h4>Organization (Gen-Z)</h4>
                         <p>Rumah yang fleksibel, terbuka, kreatif, dan ramah bagi generasi muda.</p>
                     </div>
                 </div>
@@ -308,27 +289,28 @@
         </div>
     </section>
 
-    <!-- 6. Legalitas Perusahaan Tab Section -->
-    <section class="legalitas-section section-padding bg-light">
+    <!-- 5. Legalitas Perusahaan Tab Section -->
+    <section class="legalitas-section section-padding">
         <div class="container">
-            <div class="section-title text-center">
+            <div class="section-header text-center">
                 <h2>Legalitas Perusahaan</h2>
-                <p>Komitmen kami beroperasi sesuai standar hukum dan tata kelola yang baik (Good Corporate Governance).</p>
+                <p class="section-description">Komitmen kami beroperasi sesuai standar hukum dan tata kelola yang baik (Good Corporate Governance).</p>
             </div>
 
             <div class="legal-tabs-wrapper">
                 <!-- Tab Navigation -->
                 <div class="legal-tabs-header">
                     <button class="tab-btn active" onclick="openTab(event, 'tab-nib')">
-                        <i class="fa-solid fa-file-contract"></i> Legalitas NIB
+                        <i class="fa-solid fa-file-contract" style="margin-right: 6px;"></i> Legalitas NIB
                     </button>
                     <button class="tab-btn" onclick="openTab(event, 'tab-domisili')">
-                        <i class="fa-solid fa-building-user"></i> Domisili Perusahaan
+                        <i class="fa-solid fa-building-user" style="margin-right: 6px;"></i> Domisili & Kontak
                     </button>
                 </div>
 
                 <!-- Tab Contents -->
                 <div class="legal-tabs-body">
+                    <!-- Tab NIB -->
                     <div id="tab-nib" class="tab-content active">
                         <div class="legal-info-grid">
                             <div class="legal-item">
@@ -354,13 +336,22 @@
                         </div>
                     </div>
 
+                    <!-- Tab Domisili -->
                     <div id="tab-domisili" class="tab-content">
                         <div class="domisili-box">
                             <i class="fa-solid fa-location-dot location-icon"></i>
                             <div>
-                                <h4>Alamat Kantor Terdaftar</h4>
-                                <p>Jl. BTN Tonasa, Blok I, No.7, Kelurahan Karampuang, Kecamatan Panakkukang, Kota Makassar, Provinsi Sulawesi Selatan, Kode Pos: 90231</p>
+                                <h4 style="margin-bottom: 8px; color: var(--primary-navy);">Alamat Kantor Terdaftar</h4>
+                                <p style="color: var(--neutral-dark); line-height: 1.6;">
+                                    Jl. BTN Tonasa, Blok I, No.7, Kelurahan Karampuang, <br>
+                                    Kecamatan Panakkukang, Kota Makassar, <br>
+                                    Provinsi Sulawesi Selatan, Kode Pos: 90231
+                                </p>
                             </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                            <a href="tel:08119944511" class="btn btn-outline"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> Hubungi Telepon</a>
+                            <a href="mailto:pt.brimoswarnindokaryavara@gmail.com" class="btn btn-accent"><i class="fas fa-envelope" style="margin-right: 8px;"></i> Kirim Email</a>
                         </div>
                     </div>
                 </div>
@@ -368,53 +359,28 @@
         </div>
     </section>
 
-    <!-- 7. Informasi Kontak -->
-    <section id="kontak" class="contact-section section-padding">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Hubungi Kami</h2>
-                <p>Kami siap berkolaborasi untuk kemajuan pendidikan Indonesia.</p>
-            </div>
+    <!-- Placeholder Footer (Dimuat via components.js) -->
+    <div id="footer-placeholder"></div>
 
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <i class="fa-solid fa-phone"></i>
-                    <h4>Telepon / Whatsapp</h4>
-                    <p><a href="tel:08119944511">0811-9944-511</a></p>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h4>Email Resmi</h4>
-                    <p><a href="mailto:pt.brimoswarnindokaryavara@gmail.com">pt.brimoswarnindokaryavara@gmail.com</a></p>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <h4>Lokasi Kantor</h4>
-                    <p>Makassar, Sulawesi Selatan</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container text-center">
-            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
-        </div>
-    </footer>
-
+    <!-- Scripts -->
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+    
     <!-- Tab Interactive Script -->
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
+            // Hide all content
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].classList.remove("active");
             }
+            // Remove active class from buttons
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
+            // Show current tab & add active class
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
