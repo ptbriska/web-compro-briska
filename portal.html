@@ -3,295 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRISKA Portal Hub</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* RESET & BASE STYLES */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    <title>Portal Hub - PT BRIMO SWARNINDO KARYAVARA</title>
+    <meta name="description" content="Pintu akses terpadu menuju seluruh unit bisnis, platform digital, dan layanan BRISKA Education Corporation." />
 
-        /* HEADER & NAVIGATION */
-        .site-header {
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #0284c7;
-            letter-spacing: 1px;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 25px;
-        }
-        .nav-menu a {
-            font-weight: 600;
-            color: #475569;
-            transition: color 0.3s;
-            padding: 5px 0;
-        }
-        .nav-menu a:hover, .nav-menu a.active {
-            color: #0284c7;
-            border-bottom: 2px solid #0284c7;
-        }
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-        /* HERO SECTION */
-        .portal-hero {
-            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-            color: #ffffff;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .portal-hero h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .portal-hero p {
-            font-size: 18px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* MAIN CONTENT & CARDS */
-        .portal-section {
-            padding: 50px 0;
-        }
-        .section-title {
-            font-size: 24px;
-            color: #0f172a;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 10px;
-        }
-        .section-title i {
-            color: #0284c7;
-        }
-        .margin-top-xl {
-            margin-top: 50px;
-        }
-        .portal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 24px;
-        }
-        .portal-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-        .portal-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 20px -5px rgba(2, 132, 199, 0.15);
-            border-color: #38bdf8;
-        }
-        .card-icon {
-            font-size: 32px;
-            color: #0284c7;
-            margin-bottom: 15px;
-        }
-        .portal-card h3 {
-            font-size: 20px;
-            color: #0f172a;
-            margin-bottom: 8px;
-        }
-        .portal-card p {
-            font-size: 14px;
-            color: #64748b;
-            flex-grow: 1;
-            margin-bottom: 18px;
-        }
-        .link-text {
-            font-size: 14px;
-            font-weight: 600;
-            color: #0284c7;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* FOOTER */
-        .site-footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 30px 0;
-            margin-top: 60px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        /* RESPONSIVE MOBILE */
-        @media (max-width: 768px) {
-            .nav-wrapper {
-                flex-direction: column;
-                height: auto;
-                padding: 15px 0;
-                gap: 15px;
-            }
-            .portal-hero h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <!-- Base & Page Styling -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages/portal.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">BRISKA</a>
-            <nav class="nav-menu">
-                <a href="index.html">Beranda</a>
-                <a href="tentang.html">Tentang Kami</a>
-                <a href="csr.html">CSR & SDGs</a>
-                <a href="artikel.html">Artikel</a>
-                <a href="portal.html" class="active">Portal Hub</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Placeholder Header (Dimuat via components.js) -->
+    <div id="header-placeholder"></div>
 
+    <!-- Hero Section Portal -->
     <section class="portal-hero">
-        <div class="container">
+        <div class="container hero-content text-center">
             <h1>BRISKA Portal Hub</h1>
-            <p>Pintu akses terpadu menuju seluruh unit bisnis, platform digital, dan portal layanan BRISKA.</p>
+            <p>Pintu akses terpadu menuju seluruh unit bisnis, platform digital, dan layanan BRISKA.</p>
         </div>
     </section>
 
-    <section class="portal-section">
+    <!-- MAIN CONTENT & CARDS -->
+    <section class="portal-section section-padding bg-light">
         <div class="container">
-            <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Unit Bisnis & Ekosistem</h2>
-            <div class="portal-grid">
-                <a href="https://kelasbisa.com" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-graduation-cap card-icon"></i>
-                    <h3>Kelas Bisa</h3>
-                    <p>Pendidikan Non-Formal & LMS AI</p>
-                    <span class="link-text">kelasbisa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+            
+            <!-- Ekosistem Bisnis -->
+            <div class="portal-category">
+                <h2 class="portal-section-title"><i class="fa-solid fa-layer-group"></i> 6 Pilar Ekosistem Bisnis</h2>
+                <div class="portal-grid">
+                    <a href="https://kelasbisa.com" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-graduation-cap card-icon"></i>
+                        <h3>Kelas Bisa</h3>
+                        <p>Pendidikan Non-Formal & LMS AI</p>
+                        <span class="link-text">kelasbisa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://penabisa.com" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-book-open card-icon"></i>
-                    <h3>Pena Bisa</h3>
-                    <p>Penerbitan, Percetakan & Literasi</p>
-                    <span class="link-text">penabisa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://penabisa.com" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-book-open card-icon"></i>
+                        <h3>Pena Bisa</h3>
+                        <p>Penerbitan, Percetakan & Literasi</p>
+                        <span class="link-text">penabisa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://pakkakasa.com" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-laptop-code card-icon"></i>
-                    <h3>Pakkakasa Digipro</h3>
-                    <p>Teknologi & Toolkit Produktivitas</p>
-                    <span class="link-text">pakkakasa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://pakkakasa.com" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-laptop-code card-icon"></i>
+                        <h3>Pakkakasa Digipro</h3>
+                        <p>Teknologi & Toolkit Produktivitas</p>
+                        <span class="link-text">pakkakasa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://barugahub.com" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-users-rectangle card-icon"></i>
-                    <h3>Barugahub</h3>
-                    <p>Event Pendidikan & Kompetisi</p>
-                    <span class="link-text">barugahub.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://barugahub.com" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-users-rectangle card-icon"></i>
+                        <h3>Barugahub</h3>
+                        <p>Event Pendidikan & Kompetisi</p>
+                        <span class="link-text">barugahub.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://apacaconsulting.com" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-certificate card-icon"></i>
-                    <h3>APACA Consulting</h3>
-                    <p>Sertifikasi & Konsultasi Pendidikan</p>
-                    <span class="link-text">apacaconsulting.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://apacaconsulting.com" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-certificate card-icon"></i>
+                        <h3>APACA Consulting</h3>
+                        <p>Sertifikasi & Konsultasi Pendidikan</p>
+                        <span class="link-text">apacaconsulting.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://celebesmacca.sch.id" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-school card-icon"></i>
-                    <h3>SMA Celebes Macca</h3>
-                    <p>Sekolah Menengah Atas Swasta Boarding</p>
-                    <span class="link-text">celebesmacca.sch.id <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://celebesmacca.sch.id" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-school card-icon"></i>
+                        <h3>SMA Celebes Macca</h3>
+                        <p>Sekolah Menengah Atas Swasta Boarding</p>
+                        <span class="link-text">celebesmacca.sch.id <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
+                </div>
             </div>
 
-            <h2 class="section-title margin-top-xl"><i class="fa-solid fa-network-wired"></i> Portal Akses Layanan Digital</h2>
-            <div class="portal-grid">
-                <a href="https://lms.kelasbisa.com" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-chalkboard-user card-icon"></i>
-                    <h3>Portal LMS</h3>
-                    <p>Sistem Manajemen Pembelajaran Digital</p>
-                    <span class="link-text">lms.kelasbisa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+            <!-- Portal Akses Layanan Digital -->
+            <div class="portal-category margin-top-xl">
+                <h2 class="portal-section-title"><i class="fa-solid fa-network-wired"></i> Portal Akses Layanan Digital</h2>
+                <div class="portal-grid">
+                    <a href="https://lms.kelasbisa.com" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-chalkboard-user card-icon"></i>
+                        <h3>Portal LMS</h3>
+                        <p>Sistem Manajemen Pembelajaran Digital</p>
+                        <span class="link-text">lms.kelasbisa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://briskajournal.com" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-newspaper card-icon"></i>
-                    <h3>Portal Jurnal</h3>
-                    <p>Publikasi Ilmiah & Riset BRISKA</p>
-                    <span class="link-text">briskajournal.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://briskajournal.com" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-newspaper card-icon"></i>
+                        <h3>Portal Jurnal</h3>
+                        <p>Publikasi Ilmiah & Riset BRISKA</p>
+                        <span class="link-text">briskajournal.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://btp.briska.co.id" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-pen-to-square card-icon"></i>
-                    <h3>Portal CBT</h3>
-                    <p>Computer Based Test Platform</p>
-                    <span class="link-text">btp.briska.co.id <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://btp.briska.co.id" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-pen-to-square card-icon"></i>
+                        <h3>Portal CBT</h3>
+                        <p>Computer Based Test Platform (BTP)</p>
+                        <span class="link-text">btp.briska.co.id <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://toko.penabisa.com" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-store card-icon"></i>
-                    <h3>Toko Pena Bisa</h3>
-                    <p>Toko Buku & Modul Digital/Cetak</p>
-                    <span class="link-text">toko.penabisa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://toko.penabisa.com" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-store card-icon"></i>
+                        <h3>Toko Pena Bisa</h3>
+                        <p>Toko Buku & Modul Digital/Cetak</p>
+                        <span class="link-text">toko.penabisa.com <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://regis.briska.co.id" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-user-plus card-icon"></i>
-                    <h3>Portal Registrasi</h3>
-                    <p>Pendaftaran Program & Acara BRISKA</p>
-                    <span class="link-text">regis.briska.co.id <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://regis.briska.co.id" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-user-plus card-icon"></i>
+                        <h3>Portal Registrasi</h3>
+                        <p>Pendaftaran Program & Acara BRISKA</p>
+                        <span class="link-text">regis.briska.co.id <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
 
-                <a href="https://career.briska.co.id" target="_blank" class="portal-card">
-                    <i class="fa-solid fa-briefcase card-icon"></i>
-                    <h3>Portal Karir & Rekrutmen</h3>
-                    <p>Informasi Lowongan Kerja & Karir</p>
-                    <span class="link-text">career.briska.co.id <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
+                    <a href="https://career.briska.co.id" target="_blank" class="portal-card">
+                        <i class="fa-solid fa-briefcase card-icon"></i>
+                        <h3>Portal Karir & Rekrutmen</h3>
+                        <p>Informasi Lowongan Kerja & Karir</p>
+                        <span class="link-text">career.briska.co.id <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- Placeholder Footer (Dimuat via components.js) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
