@@ -1,0 +1,291 @@
+/* ==========================================
+   BRISKA HOME PAGE STYLES
+   ========================================== */
+
+/* Hero Section */
+.hero-section {
+  padding: 5rem 0 4rem 0;
+  background: linear-gradient(135deg, var(--neutral-light) 0%, var(--white) 100%);
+  border-bottom: 1px solid var(--neutral-gray);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.badge-hero {
+  display: inline-block;
+  background-color: rgba(0, 141, 218, 0.1);
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  color: var(--neutral-medium);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image-wrapper {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+}
+
+.hero-card-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background-color: var(--primary-navy);
+  color: var(--white);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-card-badge i {
+  font-size: 2rem;
+  color: var(--accent-blue);
+}
+
+.hero-card-badge strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.hero-card-badge span {
+  font-size: 0.75rem;
+  color: var(--neutral-gray);
+}
+
+/* Dashboard Counter Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background-color: var(--white);
+  border: 1px solid var(--neutral-gray);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: var(--accent-blue);
+  margin-bottom: 0.75rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  color: var(--neutral-medium);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* SDG Section */
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.sdg-card {
+  background-color: var(--white);
+  padding: 1.75rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--accent-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.sdg-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.sdg-4 { background-color: #C5192D; }
+.sdg-8 { background-color: #A21942; }
+.sdg-9 { background-color: #FD6925; }
+.sdg-17 { background-color: #19486A; }
+
+.sdg-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sdg-card p {
+  color: var(--neutral-medium);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Ecosystem Section */
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.eco-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.eco-header {
+  margin-bottom: 0.5rem;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.status-active { background-color: #E6F4EA; color: #137333; }
+.status-upcoming { background-color: #FEF7E0; color: #B06000; }
+.status-planned { background-color: #E8F0FE; color: #1A73E8; }
+
+.eco-domain {
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.eco-desc {
+  color: var(--neutral-medium);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.eco-link {
+  color: var(--primary-navy);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eco-link:hover {
+  color: var(--accent-blue);
+}
+
+/* Documentation Section */
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.doc-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 240px;
+}
+
+.doc-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.doc-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem;
+  background: linear-gradient(transparent, rgba(11, 25, 44, 0.9));
+  color: var(--white);
+}
+
+.doc-overlay h4 {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.doc-overlay p {
+  font-size: 0.8rem;
+  color: var(--neutral-gray);
+}
+
+.doc-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for Home page */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid, .sdg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ecosystem-grid, .doc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .stats-grid, .sdg-grid, .ecosystem-grid, .doc-grid {
+    grid-template-columns: 1fr;
+  }
+}
