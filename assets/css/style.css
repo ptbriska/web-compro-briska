@@ -1,38 +1,36 @@
 /* ==========================================
-   IMPORT ALL MODULES
-   ========================================== */
-@import url('components.css');
-@import url('responsive.css');
-
-/* CSS spesifik halaman jika ada (opsional) */
-@import url('pages/csr.css');
-@import url('pages/portal.css');
-@import url('pages/tentang.css');
-
-/* ==========================================
    BRISKA EDUCATION CORPORATION
    Global CSS & Design System
-   ========================================== */
-   
-/* ... sisa kode style.css kamu yang kemarin biarkan tetap di bawahnya ... */
-/* ==========================================
-   BRISKA EDUCATION CORPORATION
-   Global CSS & Design System
-   Theme: Corporate Modern Navy & Gray
+   Theme: Corporate Modern Navy & Gray Gradient
    ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
+/* Import CSS Komponen & Responsive */
+@import url('components.css');
+@import url('responsive.css');
+
+/* CSS Spesifik Halaman Opsional */
+@import url('pages/csr.css');
+@import url('pages/portal.css');
+@import url('pages/tentang.css');
+
 :root {
-  /* Color Palette */
-  --primary-navy: #0B192C;       /* Deep Corporate Navy (Header, Dominant Text) */
-  --secondary-navy: #1E3E62;     /* Brand Accent Navy (Cards, Active States) */
-  --accent-blue: #008DDA;        /* Interactive Accent (Buttons, Highlights) */
+  /* Primary & Accent Color Palette */
+  --primary-navy: #0B192C;       /* Deep Corporate Navy */
+  --secondary-navy: #1E3E62;     /* Accent Navy */
+  --accent-blue: #008DDA;        /* Interactive Accent */
   
-  --neutral-dark: #1E293B;      /* Body Text (Slate 800) */
-  --neutral-medium: #64748B;    /* Muted Text / Subtitles (Slate 500) */
-  --neutral-light: #F8FAFC;     /* Light Background Section (Slate 50) */
-  --neutral-gray: #E2E8F0;      /* Borders & Dividers (Slate 200) */
+  /* Modern Gray Gradient Backgrounds */
+  --bg-gradient-main: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 50%, #EDF2F7 100%);
+  --bg-gradient-alt: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+  --bg-card-glass: rgba(255, 255, 255, 0.85);
+  
+  /* Neutral Palette */
+  --neutral-dark: #0F172A;       /* Body Text Slate 900 */
+  --neutral-medium: #475569;     /* Subtitle Slate 600 */
+  --neutral-light: #F1F5F9;      /* Card / Light Section Slate 100 */
+  --neutral-gray: #CBD5E1;       /* Border / Divider Slate 300 */
   --white: #FFFFFF;
   
   /* Typography */
@@ -41,14 +39,14 @@
   /* Layout & Spacing */
   --max-width: 1200px;
   --container-padding: 0 1.5rem;
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
   
-  /* Shadows & Transitions */
-  --shadow-sm: 0 2px 4px rgba(11, 25, 44, 0.04);
-  --shadow-md: 0 10px 25px -5px rgba(11, 25, 44, 0.08);
-  --shadow-lg: 0 20px 30px -10px rgba(11, 25, 44, 0.12);
+  /* Modern Glass Shadow System */
+  --shadow-sm: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 30px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.06);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -66,7 +64,8 @@ html {
 
 body {
   font-family: var(--font-main);
-  background-color: var(--white);
+  background: var(--bg-gradient-main);
+  background-attachment: fixed;
   color: var(--neutral-dark);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -95,7 +94,7 @@ img {
   display: block;
 }
 
-/* Global Container & Section Layout */
+/* Layout Container & Section */
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -108,21 +107,23 @@ img {
 }
 
 .section-bg-light {
-  background-color: var(--neutral-light);
+  background: var(--bg-gradient-alt);
+  border-top: 1px solid rgba(203, 213, 225, 0.5);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.5);
 }
 
 .section-header {
   text-align: center;
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto 3.5rem auto;
 }
 
 .section-subtitle {
   color: var(--accent-blue);
-  font-weight: 700;
-  font-size: 0.875rem;
+  font-weight: 800;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -130,128 +131,83 @@ img {
 .section-title {
   font-size: 2.25rem;
   margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 .section-description {
   color: var(--neutral-medium);
-  font-size: 1.125rem;
+  font-size: 1.1rem;
 }
 
 /* ==========================================
-   1. GLOBAL HEADER & NAVIGATION
-   ========================================== */
-.site-header {
-  background-color: var(--white);
-  border-bottom: 1px solid var(--neutral-gray);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: var(--shadow-sm);
-}
-
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-}
-
-.site-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--primary-navy);
-  letter-spacing: -0.5px;
-}
-
-.site-logo span {
-  color: var(--accent-blue);
-}
-
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-link {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--neutral-dark);
-  padding: 0.5rem 0;
-  position: relative;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--accent-blue);
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-blue);
-  border-radius: 2px;
-}
-
-/* ==========================================
-   2. HERO BANNER
+   HERO BANNER & PORTAL CARDS
    ========================================== */
 .hero-banner {
-  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+  background: linear-gradient(135deg, var(--primary-navy) 0%, #11223B 50%, var(--secondary-navy) 100%);
   color: var(--white);
-  padding: 5rem 0;
+  padding: 6rem 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0, 141, 218, 0.12) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .hero-banner h1 {
   color: var(--white);
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -1px;
 }
 
 .hero-banner p {
-  color: #CBD5E1; /* Muted Slate Light */
+  color: #CBD5E1;
   font-size: 1.2rem;
   max-width: 750px;
   margin: 0 auto;
 }
 
-/* ==========================================
-   3. PORTAL HUB & GRID CARDS
-   ========================================== */
+/* Portal Grid Card */
 .portal-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .portal-card {
-  background-color: var(--white);
-  border: 1px solid var(--neutral-gray);
+  background: var(--bg-card-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: var(--radius-md);
-  padding: 2rem;
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
-  position: relative;
 }
 
 .portal-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: var(--accent-blue);
   box-shadow: var(--shadow-lg);
+  background: var(--white);
 }
 
 .card-icon {
-  width: 50px;
-  height: 50px;
-  background-color: var(--neutral-light);
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #E2E8F0 0%, #F8FAFC 100%);
   color: var(--accent-blue);
   border-radius: var(--radius-sm);
   display: flex;
@@ -260,17 +216,18 @@ img {
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
   transition: var(--transition);
+  border: 1px solid var(--neutral-gray);
 }
 
 .portal-card:hover .card-icon {
-  background-color: var(--accent-blue);
+  background: var(--accent-blue);
   color: var(--white);
+  border-color: var(--accent-blue);
 }
 
 .portal-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: var(--primary-navy);
 }
 
 .portal-card p {
@@ -281,7 +238,7 @@ img {
 }
 
 .card-link {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--accent-blue);
   display: inline-flex;
@@ -289,90 +246,37 @@ img {
   gap: 0.5rem;
 }
 
-/* ==========================================
-   4. CSR & TABLE STYLES
-   ========================================== */
+/* Tabel CSR Modern */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
   border-radius: var(--radius-md);
   border: 1px solid var(--neutral-gray);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  background: var(--white);
 }
 
 .csr-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--white);
   text-align: left;
 }
 
 .csr-table th {
   background-color: var(--primary-navy);
   color: var(--white);
-  padding: 1.2rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   font-size: 0.95rem;
   font-weight: 700;
 }
 
 .csr-table td {
-  padding: 1.2rem 1.5rem;
-  border-bottom: 1px solid var(--neutral-gray);
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--neutral-light);
   color: var(--neutral-dark);
   font-size: 0.95rem;
 }
 
-.csr-table tr:last-child td {
-  border-bottom: none;
-}
-
 .csr-table tr:hover {
-  background-color: var(--neutral-light);
-}
-
-/* ==========================================
-   5. GLOBAL FOOTER
-   ========================================== */
-.site-footer {
-  background-color: var(--primary-navy);
-  color: var(--neutral-medium);
-  padding: 3rem 0;
-  margin-top: 5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.site-footer p {
-  color: #94A3B8;
-}
-
-/* ==========================================
-   6. RESPONSIVE MOBILE DISPLAY
-   ========================================== */
-@media (max-width: 768px) {
-  .site-header .container {
-    flex-direction: column;
-    height: auto;
-    padding: 1.2rem;
-    gap: 1rem;
-  }
-
-  .nav-menu {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero-banner h1 {
-    font-size: 2rem;
-  }
-
-  .section {
-    padding: 3rem 0;
-  }
-
-  .portal-grid {
-    grid-template-columns: 1fr;
-  }
+  background-color: rgba(241, 245, 249, 0.8);
 }
