@@ -9,17 +9,21 @@
     font-size: 1.875rem;
   }
   
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  .hero-banner h1 {
+    font-size: 2.35rem;
   }
   
-  /* Mobile Menu Toggle Button */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  /* Mobile Toggle Icon */
   .mobile-toggle {
     display: block;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: var(--primary-navy);
     cursor: pointer;
   }
@@ -33,8 +37,8 @@
     background-color: var(--white);
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem;
-    gap: 1.25rem;
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
     transition: var(--transition);
     overflow-y: auto;
     box-shadow: var(--shadow-lg);
@@ -54,6 +58,7 @@
     padding-left: 1rem;
     width: 100%;
     display: none;
+    background: transparent;
   }
 
   .dropdown.active .dropdown-menu {
@@ -67,11 +72,24 @@
     padding: 3.5rem 0;
   }
 
+  .hero-banner {
+    padding: 4rem 0;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.85rem;
+  }
+
   .top-bar {
-    display: none; /* Hide top bar on very small screens for clean UX */
+    display: none;
   }
 
   .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .portal-grid {
     grid-template-columns: 1fr;
   }
 }
