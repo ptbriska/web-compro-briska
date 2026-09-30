@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kabar & Artikel - BRISKA</title>
+    <meta name="description" content="Kumpulan berita, wawasan edukasi, teknologi, dan kegiatan terbaru dari ekosistem PT Brimo Swarnindo Karyavara." />
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/pages/artikel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">BRISKA</a>
-            <nav class="nav-menu">
-                <a href="index.html">Beranda</a>
-                <a href="tentang.html">Tentang Kami</a>
-                <a href="csr.html">CSR & SDGs</a>
-                <a href="artikel.html" class="active">Artikel & Berita</a>
-                <a href="portal.html">Portal Hub</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Placeholder Header -->
+    <div id="header-placeholder"></div>
 
+    <!-- News Ticker (Pita Berita Berjalan) -->
     <div class="news-ticker-bar">
-        <div class="container">
+        <div class="container ticker-flex">
             <span class="ticker-label"><i class="fa-solid fa-bolt"></i> TERKINI</span>
             <marquee behavior="scroll" direction="left" scrollamount="6">
-                BRISKA siap meluncurkan platform LMS AI Kelas Bisa pada Agustus 2025 • Program Beasiswa Kelas Bisa menyasar 3T • Pendaftaran Kompetisi Riset Barugahub dibuka segera.
+                BRISKA siap meluncurkan platform LMS AI Kelas Bisa pada Agustus 2025 &nbsp; • &nbsp; Program Beasiswa Kelas Bisa menyasar 3T &nbsp; • &nbsp; Pendaftaran Kompetisi Riset Barugahub dibuka segera.
             </marquee>
         </div>
     </div>
 
-    <main class="news-main section-padding">
+    <!-- Layout Halaman Artikel -->
+    <main class="news-main section-padding bg-light">
         <div class="container news-layout">
             
             <!-- PANEL KIRI: Tag, Kategori & Riwayat Berita -->
@@ -42,7 +43,7 @@
                     <h3><i class="fa-solid fa-magnifying-glass"></i> Cari Berita</h3>
                     <div class="search-box">
                         <input type="text" placeholder="Kata kunci...">
-                        <button type="button"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button type="button" aria-label="Cari"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
 
@@ -74,7 +75,7 @@
 
                 <!-- Riwayat Berita Upload (Arsip) -->
                 <div class="sidebar-widget">
-                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Riwayat Upload</h3>
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Arsip Terbaru</h3>
                     <ul class="archive-list">
                         <li>
                             <a href="#">
@@ -103,7 +104,7 @@
                 <!-- Headline / Berita Utama -->
                 <article class="featured-news-card">
                     <div class="featured-img-wrapper">
-                        <img src="assets/img/news-featured.jpg" alt="Featured News" id="featured-img">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" alt="Featured News" class="featured-img">
                         <span class="badge-category">Edukasi & Teknologi</span>
                     </div>
                     <div class="featured-news-body">
@@ -121,7 +122,7 @@
                 <div class="news-grid margin-top-lg">
                     <article class="news-card">
                         <div class="news-thumb">
-                            <img src="assets/img/news-1.jpg" alt="News 1">
+                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop" alt="Beasiswa Kelas Bisa">
                             <span class="badge-category">Pengabdian & SDGs</span>
                         </div>
                         <div class="news-card-body">
@@ -135,7 +136,7 @@
 
                     <article class="news-card">
                         <div class="news-thumb">
-                            <img src="assets/img/news-2.jpg" alt="News 2">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop" alt="Kompetisi Barugahub">
                             <span class="badge-category">Kompetisi</span>
                         </div>
                         <div class="news-card-body">
@@ -149,7 +150,7 @@
 
                     <article class="news-card">
                         <div class="news-thumb">
-                            <img src="assets/img/news-3.jpg" alt="News 3">
+                            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=600&auto=format&fit=crop" alt="Layanan ISBN Pena Bisa">
                             <span class="badge-category">Riset & Publikasi</span>
                         </div>
                         <div class="news-card-body">
@@ -163,7 +164,7 @@
                 </div>
 
                 <!-- Pagination -->
-                <div class="pagination">
+                <div class="pagination margin-top-lg">
                     <a href="#" class="page-link active">1</a>
                     <a href="#" class="page-link">2</a>
                     <a href="#" class="page-link">3</a>
@@ -174,11 +175,11 @@
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="container text-center">
-            <p>&copy; 2026 PT BRIMO SWARNINDO KARYAVARA (BRISKA). All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- Placeholder Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
