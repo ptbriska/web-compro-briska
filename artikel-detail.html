@@ -3,172 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kabar & Artikel - BRISKA</title>
-    <meta name="description" content="Kumpulan berita, wawasan edukasi, teknologi, dan kegiatan terbaru dari ekosistem PT Brimo Swarnindo Karyavara." />
+    <title>Detail Artikel - BRISKA</title>
+    <meta name="description" content="Baca artikel, berita, dan opini terbaru seputar pendidikan, teknologi, dan ekosistem PT Brimo Swarnindo Karyavara." />
 
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/pages/artikel.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Marked JS Library untuk Merender File .md ke HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
     <!-- Placeholder Header -->
     <div id="header-placeholder"></div>
 
-    <!-- News Ticker (Pita Berita Berjalan) -->
-    <div class="news-ticker-bar">
-        <div class="container ticker-flex">
-            <span class="ticker-label"><i class="fa-solid fa-bolt"></i> TERKINI</span>
-            <marquee behavior="scroll" direction="left" scrollamount="6">
-                BRISKA siap meluncurkan platform LMS AI Kelas Bisa pada Agustus 2025 &nbsp; • &nbsp; Program Beasiswa Kelas Bisa menyasar 3T &nbsp; • &nbsp; Pendaftaran Kompetisi Riset Barugahub dibuka segera.
-            </marquee>
-        </div>
-    </div>
-
-    <!-- Layout Halaman Artikel -->
-    <main class="news-main section-padding bg-light">
-        <div class="container news-layout">
+    <main class="article-detail-main section-padding bg-light">
+        <div class="container article-container">
             
-            <!-- PANEL KIRI: Tag, Kategori & Riwayat Berita -->
-            <aside class="news-sidebar-left">
-                <!-- Pencarian Artikel -->
-                <div class="sidebar-widget search-widget">
-                    <h3><i class="fa-solid fa-magnifying-glass"></i> Cari Berita</h3>
-                    <div class="search-box">
-                        <input type="text" placeholder="Kata kunci...">
-                        <button type="button" aria-label="Cari"><i class="fa-solid fa-arrow-right"></i></button>
+            <a href="artikel.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke Daftar Artikel</a>
+
+            <article class="single-article">
+                <header class="article-header">
+                    <span class="badge-category" id="article-category">Memuat...</span>
+                    <h1 id="article-title">Sedang Menyiapkan Artikel...</h1>
+                    <div class="article-meta">
+                        <span><i class="fa-regular fa-calendar"></i> <span id="article-date">...</span></span>
+                        <span><i class="fa-regular fa-user"></i> <span id="article-author">Redaksi BRISKA</span></span>
+                        <span><i class="fa-regular fa-eye"></i> <span id="article-views">...</span> dibaca</span>
+                    </div>
+                </header>
+
+                <div class="featured-image-wrapper">
+                    <!-- Placeholder sebelum gambar termuat -->
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Loading Banner" id="article-banner" style="background-color: var(--neutral-light);">
+                </div>
+
+                <!-- Konten Markdown di-render di sini -->
+                <div class="article-body markdown-content" id="markdown-container">
+                    <div class="loading-state text-center" style="padding: 3rem 0;">
+                        <i class="fas fa-circle-notch fa-spin fa-3x" style="color: var(--accent-blue);"></i>
+                        <p style="margin-top: 1rem; color: var(--neutral-medium);">Sedang membaca file Markdown...</p>
                     </div>
                 </div>
 
-                <!-- Kategori -->
-                <div class="sidebar-widget">
-                    <h3><i class="fa-solid fa-folder-open"></i> Kategori</h3>
-                    <ul class="category-list">
-                        <li><a href="#">Edukasi & Teknologi <span>(12)</span></a></li>
-                        <li><a href="#">Pengabdian & SDGs <span>(8)</span></a></li>
-                        <li><a href="#">Kompetisi & Prestasi <span>(5)</span></a></li>
-                        <li><a href="#">Riset & Publikasi <span>(9)</span></a></li>
-                        <li><a href="#">Info Perusahaan <span>(4)</span></a></li>
-                    </ul>
-                </div>
+                <!-- Interactive Bar: Like & Share -->
+                <div class="article-actions-bar" id="article-actions" style="display:none;">
+                    <button class="action-btn like-btn" id="likeBtn">
+                        <i class="fa-regular fa-heart"></i> Suka (<span id="likeCount">42</span>)
+                    </button>
 
-                <!-- Panel Tag Populer -->
-                <div class="sidebar-widget">
-                    <h3><i class="fa-solid fa-tags"></i> Tag Populer</h3>
-                    <div class="tag-cloud">
-                        <a href="#" class="tag-item">#KelasBisa</a>
-                        <a href="#" class="tag-item">#LMSAI</a>
-                        <a href="#" class="tag-item">#SDGs</a>
-                        <a href="#" class="tag-item">#Beasiswa3T</a>
-                        <a href="#" class="tag-item">#PenaBisa</a>
-                        <a href="#" class="tag-item">#Barugahub</a>
-                        <a href="#" class="tag-item">#InovasiDigital</a>
+                    <div class="share-group">
+                        <span style="font-size: 0.9rem; font-weight: 600; color: var(--neutral-medium);">Bagikan:</span>
+                        <a href="#" id="shareWA" target="_blank" class="share-icon wa"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" id="shareFB" target="_blank" class="share-icon fb"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" id="shareTW" target="_blank" class="share-icon tw"><i class="fa-brands fa-x-twitter"></i></a>
+                        <button class="share-icon copy-link" id="copyLinkBtn" title="Salin Link"><i class="fa-solid fa-link"></i></button>
                     </div>
                 </div>
+            </article>
 
-                <!-- Riwayat Berita Upload (Arsip) -->
-                <div class="sidebar-widget">
-                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Arsip Terbaru</h3>
-                    <ul class="archive-list">
-                        <li>
-                            <a href="#">
-                                <span class="archive-date">30 Sep 2026</span>
-                                <span class="archive-title">Perkembangan Ekosistem Pendidikan Digital BRISKA</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="archive-date">15 Agu 2025</span>
-                                <span class="archive-title">Peluncuran Kelas Bisa LMS Berbasis AI</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="archive-date">02 Jun 2025</span>
-                                <span class="archive-title">Pena Bisa Membuka Layanan PoD untuk Penulis Lokal</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </aside>
+            <!-- Section Komentar -->
+            <section class="comments-section margin-top-xl" id="comments-section" style="display:none;">
+                <h3><i class="fa-solid fa-comments" style="color: var(--accent-blue);"></i> Komentar (<span id="commentCount">2</span>)</h3>
 
-            <!-- PANEL KANAN: Daftar Berita & Artikel Utama -->
-            <section class="news-content-right">
-                <!-- Headline / Berita Utama -->
-                <article class="featured-news-card">
-                    <div class="featured-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" alt="Featured News" class="featured-img">
-                        <span class="badge-category">Edukasi & Teknologi</span>
+                <form id="commentForm" class="comment-form">
+                    <div class="form-row">
+                        <input type="text" id="commentName" placeholder="Nama Lengkap *" required>
+                        <input type="email" id="commentEmail" placeholder="Email Aktif *" required>
                     </div>
-                    <div class="featured-news-body">
-                        <div class="news-meta">
-                            <span><i class="fa-regular fa-calendar"></i> 30 September 2026</span>
-                            <span><i class="fa-regular fa-user"></i> Tim Redaksi</span>
-                        </div>
-                        <h2><a href="artikel-detail.html?file=2026-09-30-peluncuran-lms-ai">Transformasi Pendidikan Non-Formal Melalui LMS AI Kelas Bisa</a></h2>
-                        <p>BRISKA secara resmi memperkenalkan sistem pembelajaran berbasis Artificial Intelligence untuk mendukung akses pendidikan yang adil dan inklusif di seluruh wilayah Indonesia...</p>
-                        <a href="artikel-detail.html?file=2026-09-30-peluncuran-lms-ai" class="btn-read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </article>
+                    <textarea id="commentMessage" rows="4" placeholder="Tuliskan komentar atau tanggapan Anda..." required></textarea>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane" style="margin-right: 6px;"></i> Kirim Komentar</button>
+                </form>
 
-                <!-- Grid Berita Lainnya -->
-                <div class="news-grid margin-top-lg">
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop" alt="Beasiswa Kelas Bisa">
-                            <span class="badge-category">Pengabdian & SDGs</span>
-                        </div>
-                        <div class="news-card-body">
-                            <div class="news-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 25 Sep 2026</span>
+                <div class="comments-list margin-top-lg" id="commentsList">
+                    <!-- Komentar dummy -->
+                    <div class="comment-item">
+                        <div class="comment-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <strong>Andi Pratama</strong>
+                                <span class="comment-time">Beberapa saat yang lalu</span>
                             </div>
-                            <h3><a href="artikel-detail.html?file=beasiswa-kelas-bisa-3t">Program Beasiswa Kelas Bisa Menyasar Ratusan Pelajar Daerah 3T</a></h3>
-                            <p>Inisiatif pengabdian masyarakat untuk memberikan akses coaching dan kelas gratis bagi anak yatim dan daerah 3T.</p>
+                            <p>Sangat menginspirasi! Maju terus ekosistem pendidikan BRISKA.</p>
                         </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop" alt="Kompetisi Barugahub">
-                            <span class="badge-category">Kompetisi</span>
-                        </div>
-                        <div class="news-card-body">
-                            <div class="news-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 18 Sep 2026</span>
-                            </div>
-                            <h3><a href="artikel-detail.html?file=persiapan-barugahub-2027">Barugahub Bersiap Gelar Kompetisi Penelitian & Bisnis Nasional</a></h3>
-                            <p>Wadah kolaborasi siswa dan guru untuk memacu inovasi dan riset akademik di tingkat nasional.</p>
-                        </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=600&auto=format&fit=crop" alt="Layanan ISBN Pena Bisa">
-                            <span class="badge-category">Riset & Publikasi</span>
-                        </div>
-                        <div class="news-card-body">
-                            <div class="news-meta">
-                                <span><i class="fa-regular fa-calendar"></i> 10 Sep 2026</span>
-                            </div>
-                            <h3><a href="artikel-detail.html?file=layanan-isbn-pena-bisa">Pena Bisa Fasilitasi Ratusan Penulis Pemula Mendapatkan ISBN</a></h3>
-                            <p>Dukungan self-publishing dan percetakan cepat Print on Demand (PoD) di Indonesia Timur.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Pagination -->
-                <div class="pagination margin-top-lg">
-                    <a href="#" class="page-link active">1</a>
-                    <a href="#" class="page-link">2</a>
-                    <a href="#" class="page-link">3</a>
-                    <a href="#" class="page-link"><i class="fa-solid fa-angle-right"></i></a>
+                    </div>
                 </div>
             </section>
 
@@ -180,6 +106,173 @@
 
     <script src="assets/js/components.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <!-- Script Inti: Auto-Render dari MD & JSON -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // Utility: Ubah YYYY-MM-DD ke Bahasa Indonesia
+            function formatIndonesianDate(dateString) {
+                const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                const date = new Date(dateString);
+                return isNaN(date) ? dateString : date.toLocaleDateString('id-ID', options);
+            }
+
+            // 1. Ambil Parameter ?file=
+            const urlParams = new URLSearchParams(window.location.search);
+            const fileName = urlParams.get('file'); // Contoh: "2026-09-30-peluncuran-lms-ai"
+            
+            if(!fileName) {
+                document.getElementById('article-title').innerText = "Artikel Tidak Ditemukan";
+                document.getElementById('markdown-container').innerHTML = "<p>Parameter file tidak valid. Silakan kembali ke daftar artikel.</p>";
+                return;
+            }
+
+            // Target Ekstensi & Random Views
+            const fullFileName = fileName.endsWith('.md') ? fileName : fileName + '.md';
+            document.getElementById('article-views').innerText = Math.floor(Math.random() * (5000 - 500 + 1)) + 500;
+
+            // 2. Cari Kategori di berita.json (Opsional, hanya untuk label di atas judul)
+            fetch('artikel/berita.json')
+                .then(res => res.json())
+                .then(data => {
+                    const matchItem = data.find(item => item.file === fullFileName);
+                    if(matchItem && matchItem.category) {
+                        document.getElementById('article-category').innerText = matchItem.category;
+                    } else {
+                        document.getElementById('article-category').innerText = "Kabar BRISKA";
+                    }
+                }).catch(() => {
+                    document.getElementById('article-category').innerText = "Artikel";
+                });
+
+            // 3. Fetch dan Render Isi File Markdown (.md)
+            fetch(`artikel/${fullFileName}`)
+                .then(response => {
+                    if(!response.ok) throw new Error('File MD Tidak Ditemukan');
+                    return response.text();
+                })
+                .then(markdownText => {
+                    
+                    // A. Ekstrak Judul dari #
+                    const titleMatch = markdownText.match(/^#\s+(.*)/m);
+                    if(titleMatch) {
+                        document.getElementById('article-title').innerText = titleMatch[1];
+                        document.title = titleMatch[1] + " - BRISKA";
+                        // Buang baris H1 agar tidak double rendering di body
+                        markdownText = markdownText.replace(/^#\s+(.*)/m, ''); 
+                    } else {
+                        document.getElementById('article-title').innerText = "Artikel Briska Education";
+                    }
+
+                    // B. Ekstrak Gambar Pertama dari ![]() untuk dijadikan Banner
+                    const imgMatch = markdownText.match(/!\[.*?\]\((.*?)\)/);
+                    if(imgMatch) {
+                        const rawImg = imgMatch[1];
+                        // Jika bukan URL absolut, arahkan relatif ke folder artikel/
+                        const imgSrc = rawImg.startsWith('http') || rawImg.startsWith('/') ? rawImg : `artikel/${rawImg}`;
+                        document.getElementById('article-banner').src = imgSrc;
+                        // Buang baris Gambar Pertama agar tidak double
+                        markdownText = markdownText.replace(/!\[.*?\]\((.*?)\)/, '');
+                    } else {
+                        document.getElementById('article-banner').src = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop";
+                    }
+
+                    // C. Ekstrak Tanggal dari Nama File
+                    const dateRaw = fullFileName.substring(0, 10);
+                    document.getElementById('article-date').innerText = formatIndonesianDate(dateRaw);
+
+                    // D. Parsing Markdown ke HTML menggunakan marked.js
+                    document.getElementById('markdown-container').innerHTML = marked.parse(markdownText.trim());
+
+                    // E. Tampilkan elemen interaktif (Like/Share/Komentar) yang sebelumnya disembunyikan
+                    document.getElementById('article-actions').style.display = 'flex';
+                    document.getElementById('comments-section').style.display = 'block';
+
+                    setupInteractivity();
+                })
+                .catch(err => {
+                    console.error(err);
+                    document.getElementById('article-title').innerText = "Gagal Membaca Artikel";
+                    document.getElementById('article-category').style.display = 'none';
+                    document.getElementById('markdown-container').innerHTML = `
+                        <div style="background: #FEF2F2; color: #991B1B; padding: 2rem; border-radius: 8px; border: 1px solid #F87171; text-align: center;">
+                            <i class="fa-solid fa-triangle-exclamation fa-2x" style="margin-bottom: 10px;"></i>
+                            <p><strong>Oops!</strong> Konten artikel belum tersedia atau file <code>artikel/${fullFileName}</code> tidak ditemukan di server.</p>
+                        </div>
+                    `;
+                    document.getElementById('article-banner').style.display = 'none';
+                });
+
+            // 4. Setup Logika Like, Share & Komentar
+            function setupInteractivity() {
+                // Fitur Like Interaktif
+                let isLiked = false;
+                let count = parseInt(document.getElementById('likeCount').innerText);
+                const likeBtn = document.getElementById('likeBtn');
+
+                likeBtn.addEventListener('click', function() {
+                    isLiked = !isLiked;
+                    if(isLiked) {
+                        count++;
+                        likeBtn.classList.add('liked');
+                        likeBtn.innerHTML = `<i class="fa-solid fa-heart" style="color: #E11D48;"></i> Disukai (<span id="likeCount">${count}</span>)`;
+                        likeBtn.style.borderColor = '#E11D48';
+                        likeBtn.style.color = '#E11D48';
+                        likeBtn.style.background = '#FFF1F2';
+                    } else {
+                        count--;
+                        likeBtn.classList.remove('liked');
+                        likeBtn.innerHTML = `<i class="fa-regular fa-heart"></i> Suka (<span id="likeCount">${count}</span>)`;
+                        likeBtn.style.borderColor = 'var(--neutral-gray)';
+                        likeBtn.style.color = 'var(--neutral-medium)';
+                        likeBtn.style.background = 'var(--white)';
+                    }
+                });
+
+                // Fitur Share Link Sosial Media
+                const currentUrl = encodeURIComponent(window.location.href);
+                document.getElementById('shareWA').href = `https://api.whatsapp.com/send?text=Baca artikel ini: ${currentUrl}`;
+                document.getElementById('shareFB').href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+                document.getElementById('shareTW').href = `https://twitter.com/intent/tweet?url=${currentUrl}`;
+
+                document.getElementById('copyLinkBtn').addEventListener('click', function() {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Tautan artikel berhasil disalin ke papan klip!');
+                });
+
+                // Form Komentar Instan (DOM)
+                const commentForm = document.getElementById('commentForm');
+                const commentsList = document.getElementById('commentsList');
+                const commentCount = document.getElementById('commentCount');
+                let totalComments = 1;
+
+                commentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('commentName').value;
+                    const message = document.getElementById('commentMessage').value;
+
+                    const newCommentHtml = `
+                        <div class="comment-item" style="animation: fadeIn 0.5s;">
+                            <div class="comment-avatar"><i class="fa-solid fa-user"></i></div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <strong>${name}</strong>
+                                    <span class="comment-time" style="color: var(--accent-blue); font-weight:600;">Baru saja</span>
+                                </div>
+                                <p>${message}</p>
+                            </div>
+                        </div>
+                    `;
+
+                    commentsList.insertAdjacentHTML('afterbegin', newCommentHtml);
+                    totalComments++;
+                    commentCount.textContent = totalComments;
+                    commentForm.reset();
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
