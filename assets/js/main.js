@@ -3,6 +3,18 @@
    Handles Mobile Menu, Dropdown, & Interactivity
    ========================================== */
 
+// Jalankan saat event custom 'headerLoaded' ditembak oleh components.js
+document.addEventListener("headerLoaded", function () {
+  initNavigation();
+});
+
+// Fallback: Jika header tidak diload via fetch (misal hardcode), jalankan juga di DOMContentLoaded
+document.addEventListener("DOMContentLoaded", function() {
+  if (document.getElementById("mainHeader")) {
+    initNavigation();
+  }
+});
+
 function initNavigation() {
   const mobileToggle = document.getElementById("mobileToggle");
   const navMenu = document.getElementById("navMenu");
@@ -10,11 +22,15 @@ function initNavigation() {
 
   // 1. Toggle Mobile Menu Bar
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener("click", function () {
+    // Hapus event listener lama (jika ada) untuk cegah duplikasi event
+    const newToggle = mobileToggle.cloneNode(true);
+    mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
+    
+    newToggle.addEventListener("click", function () {
       const isActive = navMenu.classList.toggle("active");
-      mobileToggle.setAttribute("aria-expanded", isActive);
+      newToggle.setAttribute("aria-expanded", isActive);
 
-      const icon = mobileToggle.querySelector("i");
+      const icon = newToggle.querySelector("i");
       if (icon) {
         if (isActive) {
           icon.classList.remove("fa-bars");
@@ -46,17 +62,17 @@ function initNavigation() {
   const navLinks = document.querySelectorAll(".nav-link, .dropdown-item");
 
   navLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href");
-    if (!linkPath || linkPath === "#") return;
+    const linkHref = link.getAttribute("href");
+    if (!linkHref || linkHref === "#") return;
 
-    // Bersihkan path untuk pencocokan yang tepat
-    const cleanLinkPath = linkPath.replace(/^\//, "");
-    const cleanCurrentPath = currentPath.replace(/^\//, "");
+    // Deteksi Beranda
+    const isHome = (currentPath === "/" || currentPath.endsWith("index.html") || currentPath.endsWith("briska-company-profile/")) 
+                   && linkHref.includes("index.html");
+    
+    // Deteksi pencocokan persis URL
+    const isMatch = currentPath.includes(linkHref.replace("./", "").replace("../", ""));
 
-    const isHome = (cleanCurrentPath === "" || cleanCurrentPath === "index.html") && cleanLinkPath.includes("index.html");
-    const isMatch = cleanCurrentPath.endsWith(cleanLinkPath);
-
-    if (isHome || isMatch) {
+    if (isHome || (!linkHref.includes("index.html") && isMatch)) {
       link.classList.add("active");
 
       // Highlight induk dropdown jika sub-item aktif
@@ -69,7 +85,7 @@ function initNavigation() {
   });
 }
 
-// 4. Smooth Scroll for Anchor Links (Navigasi Halaman)
+// 4. Smooth Scroll for Anchor Links (Navigasi Halaman ke ID)
 document.addEventListener("click", function (e) {
   const anchor = e.target.closest('a[href^="#"]');
   if (anchor) {
@@ -78,6 +94,14 @@ document.addEventListener("click", function (e) {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
+        // Tutup mobile menu jika terbuka saat ngeklik anchor link
+        const navMenu = document.getElementById("navMenu");
+        if(navMenu && navMenu.classList.contains('active')){
+            navMenu.classList.remove('active');
+            const toggleIcon = document.querySelector('#mobileToggle i');
+            if(toggleIcon){ toggleIcon.className = "fas fa-bars"; }
+        }
+        
         targetElement.scrollIntoView({
           behavior: "smooth",
           block: "start"
